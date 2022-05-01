@@ -1,4 +1,4 @@
-# OWASP WSTG fa-IR
+# OWASP Web Security Testing Guide (fa-IR)
 راهنمای تست امنیت وب (WSTG) فارسی OWASP
 
 
