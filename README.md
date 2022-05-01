@@ -1,5 +1,5 @@
-# OWASP_WSTG_FA
-راهنمای تست امنیت وب (WSTG) OWASP فارسی
+# OWASP WSTG fa-IR
+راهنمای تست امنیت وب (WSTG) فارسی OWASP
 
 
 ## مقدمه و اهداف
