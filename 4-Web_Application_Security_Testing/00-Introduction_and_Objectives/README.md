@@ -96,6 +96,6 @@ https://www.example.com/appx?a=1&b=1
 
 •	تست منطق کسب و کار
 
-•	تست مشتری(Client-side)
+•	تست مشتری (Client-side)
 
 •	تست API
