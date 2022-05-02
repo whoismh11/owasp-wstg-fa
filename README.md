@@ -1,14 +1,10 @@
 # OWASP Web Security Testing Guide (fa-IR)
-
 راهنمای تست امنیت وب (WSTG) فارسی OWASP
 
-
 ## مقدمه
-
 راهنمای تست امنیت وب OWASP یک راهنمای جامع برای آزمایش امنیت برنامه ها و سرویس های وب است. WSTG چارچوبی از بهترین شیوه های مورد استفاده توسط تسترهای نفوذ و سازمان ها در سراسر جهان را ارائه می دهد.
 
 ## فهرست مطالب
-
 ## 4. [Web Application Security Testing](4-Web_Application_Security_Testing/)
 
 ### 4.0 [Introduction and Objectives](4-Web_Application_Security_Testing/00-Introduction_and_Objectives/README.md)
