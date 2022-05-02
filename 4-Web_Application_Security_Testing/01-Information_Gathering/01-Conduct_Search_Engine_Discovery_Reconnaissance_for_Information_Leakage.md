@@ -1,5 +1,7 @@
 # Conduct Search Engine Discovery Reconnaissance for Information Leakage (fa-IR)
 
+شناسایی و کشف موتورهای جستجو برای نشت اطلاعات (فارسی)
+
 |ID          |
 |------------|
 |WSTG-INFO-01|
