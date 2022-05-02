@@ -1,6 +1,6 @@
 # OWASP Web Security Testing Guide (fa-IR)
 
-راهنمای آزمایش امنیت وب OWASP فارسی
+راهنمای آزمایش امنیت وب OWASP (فارسی)
 
 ## مقدمه و اهداف
 
