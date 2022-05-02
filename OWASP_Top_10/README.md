@@ -69,6 +69,8 @@
 
 هفت- مجموع CVE ها: تعداد کل CVE ها در NVD DB که به CWE های نگاشت شده به یک دسته نگاشت شده اند.
 
-#### [لینک 1 منبع](https://owasp.org/www-project-top-ten/)
+#### لینک های منبع
 
-#### [لینک 2 منبع](https://owasp.org/Top10/)
+[لینک 1](https://owasp.org/www-project-top-ten/)
+
+[لینک 2](https://owasp.org/Top10/)
