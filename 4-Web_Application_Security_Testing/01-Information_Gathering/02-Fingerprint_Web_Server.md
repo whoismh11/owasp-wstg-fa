@@ -25,7 +25,7 @@
 
 به عنوان مثال، در اینجا پاسخ به یک درخواست از یک سرور آپاچی است.
 
-```
+```xml
 HTTP/1.1 200 OK
 Date: Thu, 05 Sep 2019 17:42:39 GMT
 Server: Apache/2.4.41 (Unix)
@@ -40,7 +40,7 @@ Content-Type: text/html
 
 در اینجا پاسخ دیگری است، این بار از nginx.
 
-```
+```xml
 HTTP/1.1 200 OK
 Server: nginx/1.17.3
 Date: Thu, 05 Sep 2019 17:50:24 GMT
@@ -55,7 +55,7 @@ Accept-Ranges: bytes
 
 در اینجا پاسخی از lighttpd اینگونه به نظر می رسد.
 
-```
+```xml
 HTTP/1.0 200 OK
 Content-Type: text/html
 Accept-Ranges: bytes
@@ -69,7 +69,7 @@ Server: lighttpd/1.4.54
 
 در این مثال ها، نوع و نسخه سرور به وضوح آشکار می شود. با این حال، برنامه های کاربردی آگاه از امنیت ممکن است با تغییر هدر، اطلاعات سرور خود را مبهم کنند. به عنوان مثال، در اینجا گزیده ای از پاسخ به درخواست یک سایت با هدر اصلاح شده است:
 
-```
+```xml
 HTTP/1.1 200 OK
 Server: Website.com
 Date: Thu, 05 Sep 2019 17:57:06 GMT
@@ -112,7 +112,7 @@ Status: 200 OK
 
 به عنوان مثال، در اینجا پاسخ به درخواست متد غیر موجود SANTA CLAUS از یک سرور آپاچی است.
 
-```
+```xml
 GET / SANTA CLAUS/1.1
 
 HTTP/1.1 400 Bad Request
@@ -134,7 +134,7 @@ Content-Type: text/html; charset=iso-8859-1
 
 در اینجا پاسخ به همان درخواست از nginx است.
 
-```
+```xml
 GET / SANTA CLAUS/1.1
 
 <html>
@@ -148,7 +148,7 @@ GET / SANTA CLAUS/1.1
 
 در اینجا پاسخ به همان درخواست از lighttpd است.
 
-```
+```xml
 GET / SANTA CLAUS/1.1
 
 HTTP/1.0 400 Bad Request
