@@ -131,6 +131,4 @@ cache:owasp.org
 
 به طور دوره ای حساسیت اطلاعات طراحی و پیکربندی موجود را که به صورت آنلاین ارسال می شود، مرور کنید.
 
-#### نمونه فایل `robots.txt` تهیه شده توسط بنده:
-
-[robots.txt](assets/robots.txt)
+#### نمونه فایل `robots.txt` تهیه شده توسط بنده: [robots.txt](assets/robots.txt)
