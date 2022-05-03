@@ -18,4 +18,4 @@
 
 #### 4.1.2 [Fingerprint Web Server (وب سرور اثر انگشت)](4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server.md)
 
-## [OWASP Top 10 (10 مورد برتر OWASP)](OWASP_Top_10/)
+## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
