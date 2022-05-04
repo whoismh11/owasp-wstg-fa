@@ -146,7 +146,7 @@ $ wget --no-verbose https://www.google.com/sitemap.xml && head -n8 sitemap.xml
 ...
 ```
 
-### &#x202b;TXT امنیتی (Security TXT)
+### <div dir="rtl">TXT امنیتی (Security TXT)</div>
 
 ا `security.txt` یک استاندارد پیشنهادی ([proposed standard](https://securitytxt.org/)) است که به وب سایت ها اجازه می دهد تا سیاست های امنیتی و جزئیات تماس را تعریف کنند. دلایل متعددی وجود دارد که ممکن است در سناریوهای آزمایشی جالب باشد، از جمله اما نه محدود به:
 
