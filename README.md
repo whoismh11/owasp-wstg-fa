@@ -18,4 +18,6 @@
 
 #### 4.1.2 [Fingerprint Web Server (وب سرور اثر انگشت)](4-Web_Application_Security_Testing/01-Information_Gathering/02-Fingerprint_Web_Server.md)
 
+#### 4.1.3 [Review Webserver Metafiles for Information Leakage (بررسی متافایل های وب سرور برای نشت اطلاعات)](4-Web_Application_Security_Testing/01-Information_Gathering/03-Review_Webserver_Metafiles_for_Information_Leakage.md)
+
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
