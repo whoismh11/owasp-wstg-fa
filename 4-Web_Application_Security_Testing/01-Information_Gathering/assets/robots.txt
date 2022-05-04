@@ -24,4 +24,4 @@ Disallow: /*ref=
 Disallow: /profile/
 
 # Sitemap URL
-Sitemap: https://example.com/sitemap.php
+Sitemap: https://example.com/sitemap.xml
