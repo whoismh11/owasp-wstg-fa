@@ -148,7 +148,7 @@ $ wget --no-verbose https://www.google.com/sitemap.xml && head -n8 sitemap.xml
 
 ### <div dir="rtl">TXT امنیتی (Security TXT)</div>
 
-ا `security.txt` یک استاندارد پیشنهادی ([proposed standard](https://securitytxt.org/)) است که به وب سایت ها اجازه می دهد تا سیاست های امنیتی و جزئیات تماس را تعریف کنند. دلایل متعددی وجود دارد که ممکن است در سناریوهای آزمایشی جالب باشد، از جمله اما نه محدود به:
+<div dir="rtl">`security.txt` یک استاندارد پیشنهادی ([proposed standard](https://securitytxt.org/)) است که به وب سایت ها اجازه می دهد تا سیاست های امنیتی و جزئیات تماس را تعریف کنند. دلایل متعددی وجود دارد که ممکن است در سناریوهای آزمایشی جالب باشد، از جمله اما نه محدود به:</div>
 
 • شناسایی مسیرها یا منابع بیشتر برای گنجاندن در کشف/تحلیل.
     
@@ -161,6 +161,7 @@ $ wget --no-verbose https://www.google.com/sitemap.xml && head -n8 sitemap.xml
 فایل ممکن است در ریشه وب سرور یا `/well-known.` دایرکتوری موجود باشد. نمونه:
 
 • `https://example.com/security.txt`
+
 • `https://example.com/.well-known/security.txt`
 
 در اینجا یک نمونه دنیای واقعی است که از LinkedIn 2020 در 5 مه بازیابی شده است:
@@ -176,9 +177,9 @@ Canonical: https://www.linkedin.com/.well-known/security.txt
 Policy: https://www.linkedin.com/help/linkedin/answer/62924
 ```
 
-### &#x202b;TXT انسان ها (Humans TXT)
+### <div dir="rtl">TXT انسان ها (Humans TXT)</div>
 
-ا `humans.txt` ابتکاری برای شناخت افراد پشت وب سایت است. این به شکل یک فایل متنی است که حاوی اطلاعاتی در مورد افراد مختلفی است که در ساخت وب سایت مشارکت داشته اند. برای اطلاعات بیشتر به [humanstxt](http://humanstxt.org/) مراجعه کنید. این فایل اغلب (اگرچه نه همیشه) حاوی اطلاعاتی برای مشاغل یا سایت های شغلی/مسیرها است.
+<div dir="rtl">`humans.txt` ابتکاری برای شناخت افراد پشت وب سایت است. این به شکل یک فایل متنی است که حاوی اطلاعاتی در مورد افراد مختلفی است که در ساخت وب سایت مشارکت داشته اند. برای اطلاعات بیشتر به [humanstxt](http://humanstxt.org/) مراجعه کنید. این فایل اغلب (اگرچه نه همیشه) حاوی اطلاعاتی برای مشاغل یا سایت های شغلی/مسیرها است.</div>
 
 مثال زیر در 5 مه 2020 از Google بازیابی شده است:
 
