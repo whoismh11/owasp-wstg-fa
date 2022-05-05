@@ -78,7 +78,7 @@ Allow: /search/howsearchworks
 
 #### متا تگ ربات ها (Robots META Tag)
 
-اگر ورودی `< ... "META NAME="ROBOTS>` وجود نداشته باشد، "پروتکل حذف روبات ها (Robots Exclusion Protocol)" به ترتیب به صورت پیش فرض در نظر `INDEX,FOLLOW` گرفته می شود. بنابراین، دو ورودی معتبر دیگر که توسط "پروتکل حذف روبات ها" تعریف شده اند با پیشوند `NO...` یعنی `NOINDEX` و `NOFOLLOW` هستند.
+اگر ورودی `< ... "META NAME="ROBOTS>` وجود نداشته باشد، "پروتکل حذف روبات ها (Robots Exclusion Protocol)" به ترتیب به صورت پیش فرض `INDEX,FOLLOW` در نظر گرفته می شود. بنابراین، دو ورودی معتبر دیگر که توسط "پروتکل حذف روبات ها" تعریف شده اند با پیشوند `NO...` یعنی `NOINDEX` و `NOFOLLOW` هستند.
 
 بر اساس دستور(های) Disallow فهرست شده در `robots.txt` فایل در webroot، جستجوی عبارات منظم برای `"META NAME="ROBOTS>` هر صفحه وب انجام می شود و نتیجه با `robots.txt` فایل در webroot مقایسه می شود.
 
