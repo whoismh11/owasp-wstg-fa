@@ -193,7 +193,7 @@ Google is built by a large team of engineers, designers, researchers, robots, an
 
 ا RFC ها و پیش نویس های اینترنتی دیگری نیز وجود دارند که استفاده استاندارد شده از فایل ها را در `/well-known.` دایرکتوری پیشنهاد می کنند. لیستی از آنها را می توانید در [اینجا](https://en.wikipedia.org/wiki/List_of_/.well-known/_services_offered_by_webservers) یا [اینجا](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml) پیدا کنید.
 
-بررسی RFC/پیش نویس ها و ایجاد فهرستی برای ارائه به یک خزنده یا fuzzer برای یک آزمایش کننده نسبتاً ساده است تا وجود یا محتوای چنین فایل هایی را تأیید کند.
+بررسی RFC یا پیش نویس ها و ایجاد فهرستی برای ارائه به یک خزنده یا fuzzer برای یک آزمایش کننده نسبتاً ساده است تا وجود یا محتوای چنین فایل هایی را تأیید کند.
 
 ## ابزار ها
 
