@@ -20,4 +20,4 @@
 
 #### 4.1.3 [Review Webserver Metafiles for Information Leakage (بررسی متافایل های وب سرور برای نشت اطلاعات)](4-Web_Application_Security_Testing/01-Information_Gathering/03-Review_Webserver_Metafiles_for_Information_Leakage.md)
 
-## [OWASP Top 10 <div align="right">(10 مورد برتر OWASP)</div>](OWASP_Top_10/)
+## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
