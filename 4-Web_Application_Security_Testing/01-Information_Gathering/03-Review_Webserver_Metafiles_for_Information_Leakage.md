@@ -189,7 +189,7 @@ $ wget --no-verbose  https://www.google.com/humans.txt && cat humans.txt
 Google is built by a large team of engineers, designers, researchers, robots, and others in many different sites across the globe. It is updated continuously, and built with more tools and technologies than we can shake a stick at. If you'd like to help us out, see careers.google.com.
 ```
 
-### سایر منابع اطلاعاتی معروف (well-known.)
+### سایر منابع اطلاعاتی well-known.
 
 ا RFC ها و پیش نویس های اینترنتی دیگری نیز وجود دارند که استفاده استاندارد شده از فایل ها را در `/well-known.` دایرکتوری پیشنهاد می کنند. لیستی از آنها را می توانید در [اینجا](https://en.wikipedia.org/wiki/List_of_/.well-known/_services_offered_by_webservers) یا [اینجا](https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml) پیدا کنید.
 
