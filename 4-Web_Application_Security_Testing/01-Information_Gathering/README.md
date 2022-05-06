@@ -7,3 +7,5 @@
 4.1.2 [Fingerprint Web Server (وب سرور اثر انگشت)](02-Fingerprint_Web_Server.md)
 
 4.1.3 [Review Webserver Metafiles for Information Leakage (بررسی متافایل های وب سرور برای نشت اطلاعات)](03-Review_Webserver_Metafiles_for_Information_Leakage.md)
+
+4.1.4 [Enumerate Applications on Webserver (شمارش برنامه ها در وب سرور)](04-Enumerate_Applications_on_Webserver.md)
