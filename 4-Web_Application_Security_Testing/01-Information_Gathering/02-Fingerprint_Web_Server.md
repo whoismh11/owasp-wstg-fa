@@ -1,4 +1,4 @@
-# Fingerprint Web Server
+# Fingerprint Web Server (fa-IR)
 
 وب سرور اثر انگشت (فارسی)
 
