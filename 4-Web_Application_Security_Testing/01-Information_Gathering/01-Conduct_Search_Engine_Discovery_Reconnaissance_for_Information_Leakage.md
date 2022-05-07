@@ -98,7 +98,7 @@ cache:owasp.org
 ![Google Cache Operation Search Result Example](images/Google_cache_Operator_Search_Results_Example_20200406.png)\
 *شکل 2-4.1.1: مثال نتیجه جستجوی عملیات کش گوگل*
 
-## Google Hacking یا Dorking
+<div dir="rtl" align="right">## Google Hacking یا Dorking</div>
 
 جستجو با اپراتورها وقتی با خلاقیت آزمایشگر ترکیب شود می تواند یک تکنیک کشف بسیار مؤثر باشد. اپراتورها را می توان زنجیره ای کرد تا به طور موثر انواع خاصی از فایل ها و اطلاعات حساس را کشف کنند. این تکنیک که [Google hacking](https://en.wikipedia.org/wiki/Google_hacking) یا Dorking نام دارد با استفاده از موتورهای جستجوی دیگر نیز تا زمانی که اپراتورهای جستجو پشتیبانی می شوند امکان پذیر است.
 
