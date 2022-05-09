@@ -206,14 +206,14 @@ DNS:www.example.org, DNS:example.com, DNS:example.edu, DNS:example.net, DNS:exam
 
 ## ابزار ها
 
-ابزارهای جستجوی DNS مانند `nslookup`، `dig` و موارد مشابه.
+• ابزارهای جستجوی DNS مانند `nslookup`، `dig` و موارد مشابه.
 
-موتورهای جستجو (گوگل، بینگ و سایر موتورهای جستجوی اصلی).
+• موتورهای جستجو (گوگل، بینگ و سایر موتورهای جستجوی اصلی).
 
-خدمات جستجوی تخصصی مبتنی بر وب مرتبط با DNS: به متن مراجعه کنید.
+• خدمات جستجوی تخصصی مبتنی بر وب مرتبط با DNS: به متن مراجعه کنید.
 
-ان مپ ([Nmap](https://nmap.org/))
+• ان مپ ([Nmap](https://nmap.org/))
 
-اسکنر آسیب پذیری Nessus &#x202b;([Nessus Vulnerability Scanner](https://www.tenable.com/products/nessus))
+• اسکنر آسیب پذیری Nessus &#x202b;([Nessus Vulnerability Scanner](https://www.tenable.com/products/nessus))
 
-نیکتو ([Nikto](https://www.cirt.net/nikto2))
+• نیکتو ([Nikto](https://www.cirt.net/nikto2))
