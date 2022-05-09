@@ -168,15 +168,15 @@ Host www.owasp.org not found: 5(REFUSED)
 
 سرویس های IP معکوس مشابه پرس وجوهای معکوس DNS هستند، با این تفاوت که آزمایش کننده ها به جای سرور نام، یک برنامه مبتنی بر وب را درخواست می کنند. تعدادی از این خدمات در دسترس است. از آنجایی که آنها تمایل به بازگرداندن نتایج جزئی (و اغلب متفاوت) دارند، بهتر است از چندین سرویس برای به دست آوردن تجزیه و تحلیل جامع تر استفاده کنید.
 
-[Domain Tools Reverse IP](https://www.domaintools.com/reverse-ip/) (نیاز به عضویت رایگان دارد)
+• [Domain Tools Reverse IP](https://www.domaintools.com/reverse-ip/) (نیاز به عضویت رایگان دارد)
 
-[Bing](https://bing.com/), نحو (دستورالعمل): `ip:x.x.x.x`
+• [Bing](https://bing.com/), نحو (دستورالعمل): `ip:x.x.x.x`
 
-[Webhosting Info](http://whois.webhosting.info/), نحو (دستورالعمل): `http://whois.webhosting.info/x.x.x.x`
+• [Webhosting Info](http://whois.webhosting.info/), نحو (دستورالعمل): `http://whois.webhosting.info/x.x.x.x`
 
-[DNSstuff](https://www.dnsstuff.com/) (خدمات متعدد در دسترس است)
+• [DNSstuff](https://www.dnsstuff.com/) (خدمات متعدد در دسترس است)
 
-[Net Square](https://web.archive.org/web/20190515092354/http://www.net-square.com/mspawn.html) &#x202b;(درخواست های متعدد در دامنه ها و آدرس های IP، نیاز به نصب دارد)
+• [Net Square](https://web.archive.org/web/20190515092354/http://www.net-square.com/mspawn.html) &#x202b;(درخواست های متعدد در دامنه ها و آدرس های IP، نیاز به نصب دارد)
 
 مثال زیر نتیجه پرس و جو به یکی از سرویس های IP معکوس بالا به `216.48.3.18` آدرس آی پی `www.owasp.org` را نشان می دهد. سه نام نمادین غیر آشکار دیگر که به یک آدرس نگاشت شده اند، آشکار شده است.
 
@@ -185,22 +185,35 @@ Host www.owasp.org not found: 5(REFUSED)
 
 #### گوگل کردن (Googling)
 
-به دنبال جمع آوری اطلاعات از تکنیک های قبلی، آزمایش کنندگان می توانند به موتورهای جستجو برای اصلاح و افزایش تحلیل خود اعتماد کنند. این ممکن است شواهدی از نام های نمادین اضافی متعلق به هدف، یا برنامه های کاربردی قابل دسترسی از طریق URLهای غیر آشکار به دست دهد.
+به دنبال جمع آوری اطلاعات از تکنیک های قبلی، آزمایش کنندگان می توانند به موتورهای جستجو برای اصلاح و افزایش تحلیل خود اعتماد کنند. این ممکن است شواهدی از نام های نمادین اضافی متعلق به هدف، یا برنامه های قابل دسترسی از طریق URL های غیر آشکار به دست دهد.
 
-برای مثال، با در نظر گرفتن مثال قبلی در مورد www.owasp.org، آزمایش کننده می تواند از گوگل و سایر موتورهای جستجو به دنبال اطلاعات (از این رو، نام های DNS) مربوط به دامنه های جدید کشف شده webgoat.org، webscarab.comو پرس و جو webscarab.netکند.
+برای مثال، با در نظر گرفتن مثال قبلی در مورد `www.owasp.org`، آزمایش کننده می تواند از گوگل و سایر موتورهای جستجو به دنبال اطلاعات (از این رو، نام های DNS) مربوط به دامنه های جدید کشف شده `webgoat.org`، `webscarab.com` و `webscarab.net` پرس و جو کند.
 
-تکنیک های گوگل در تست: عنکبوت ها، ربات ها و خزنده ها توضیح داده شده است.
+تکنیک های گوگل در [تست: عنکبوت ها، ربات ها و خزنده ها](01-Conduct_Search_Engine_Discovery_Reconnaissance_for_Information_Leakage.md) توضیح داده شده است.
 
-ابزار
+#### گواهی های دیجیتال (Digital Certificates)
 
-ابزارهای جستجوی DNS مانند nslookup، digو موارد مشابه.
+اگر سرور اتصالات را از طریق HTTPS بپذیرد، نام مشترک (CN) و نام جایگزین موضوع (SAN) در گواهی ممکن است شامل یک یا چند نام میزبان (hostname) باشد. با این حال، اگر وب سرور گواهی قابل اعتمادی نداشته باشد، یا علامت های عام در حال استفاده باشد، ممکن است هیچ اطلاعات معتبری برنگردد.
+
+ا CN و SAN را می توان با بازرسی دستی گواهی یا از طریق ابزارهای دیگر مانند OpenSSL به دست آورد:
+
+```
+openssl s_client -connect 93.184.216.34:443 </dev/null 2>/dev/null | openssl x509 -noout -text | grep -E 'DNS:|Subject:'
+
+Subject: C = US, ST = California, L = Los Angeles, O = Internet Corporation for Assigned Names and Numbers, CN = www.example.org
+DNS:www.example.org, DNS:example.com, DNS:example.edu, DNS:example.net, DNS:example.org, DNS:www.example.com, DNS:www.example.edu, DNS:www.example.net
+```
+
+## ابزار ها
+
+ابزارهای جستجوی DNS مانند `nslookup`، `dig` و موارد مشابه.
 
 موتورهای جستجو (گوگل، بینگ و سایر موتورهای جستجوی اصلی).
 
 خدمات جستجوی تخصصی مبتنی بر وب مرتبط با DNS: به متن مراجعه کنید.
 
-Nmap
+ان مپ ([Nmap](https://nmap.org/))
 
-اسکنر آسیب پذیری Nessus
+اسکنر آسیب پذیری Nessus &#x202b;([Nessus Vulnerability Scanner](https://www.tenable.com/products/nessus))
 
-هيچ كس
+نیکتو ([Nikto](https://www.cirt.net/nikto2))
