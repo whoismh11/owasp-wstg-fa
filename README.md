@@ -30,4 +30,4 @@
 
 ## منبع
 
-[owasp.org](https://owasp.org/www-project-web-security-testing-guide/)
+[لینک](https://owasp.org/www-project-web-security-testing-guide/)
