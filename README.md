@@ -2,8 +2,6 @@
 
 راهنمای آزمایش امنیت وب OWASP (فارسی)
 
-[![Creative Commons License](https://licensebuttons.net/l/by-sa/4.0/88x31.png)](https://creativecommons.org/licenses/by-sa/4.0/ "CC BY-SA 4.0")
-
 ## معرفی
 
 راهنمای آزمایش امنیت وب OWASP، یک راهنمای جامع برای آزمایش امنیت برنامه ها و سرویس های وب است. OWASP-WSTG چارچوبی از بهترین شیوه های مورد استفاده توسط آزمایش کنندگان نفوذ و سازمان ها در سراسر جهان را ارائه می دهد.
