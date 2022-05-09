@@ -30,6 +30,4 @@
 
 ## منبع
 
-[لینک 1](https://owasp.org/www-project-web-security-testing-guide/stable/)
-
-[لینک 2](https://github.com/OWASP/wstg)
+[owasp.org](https://owasp.org/www-project-web-security-testing-guide/)
