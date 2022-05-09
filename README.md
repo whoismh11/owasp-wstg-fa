@@ -27,3 +27,9 @@
 #### 4.1.4 [Enumerate Applications on Webserver (شمارش برنامه ها در وب سرور)](4-Web_Application_Security_Testing/01-Information_Gathering/04-Enumerate_Applications_on_Webserver.md)
 
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
+
+## منبع
+
+[لینک 1](https://owasp.org/www-project-web-security-testing-guide/stable/)
+
+[لینک 2](https://github.com/OWASP/wstg)
