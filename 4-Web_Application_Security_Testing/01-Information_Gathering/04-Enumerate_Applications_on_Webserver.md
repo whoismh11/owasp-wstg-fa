@@ -197,7 +197,7 @@ DNS:www.example.org, DNS:example.com, DNS:example.edu, DNS:example.net, DNS:exam
 
 ## ابزار ها
 
-• ابزارهای جستجوی DNS مانند `nslookup`، `dig` و موارد مشابه.
+• ابزارهای جستجوی DNS مانند `nslookup` ،`dig` و موارد مشابه.
 
 • موتورهای جستجو (گوگل، بینگ و سایر موتورهای جستجوی اصلی).
 
