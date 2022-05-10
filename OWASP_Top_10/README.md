@@ -72,6 +72,6 @@
 
 ## لینک های منبع
 
-• [owasp.org/www-project-top-ten](https://owasp.org/www-project-top-ten/)
+- [owasp.org/www-project-top-ten](https://owasp.org/www-project-top-ten/)
 
-• [owasp.org/Top10](https://owasp.org/Top10/)
+- [owasp.org/Top10](https://owasp.org/Top10/)
