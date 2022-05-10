@@ -55,11 +55,11 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
-`strict.dtd` -- &#x202b;DTD سخت پیش فرض
+• `strict.dtd` -- &#x202b;DTD سخت پیش فرض
 
-`loose.dtd` -- &#x202b;DTD شل
+• `loose.dtd` -- &#x202b;DTD شل
 
-`frameset.dtd` -- &#x202b;DTD برای اسناد فریم ست
+• `frameset.dtd` -- &#x202b;DTD برای اسناد فریم ست
 
 برخی از `META` تگ ها بردارهای حمله فعال را ارائه نمی کنند، اما در عوض به مهاجم اجازه می دهند تا یک برنامه را نمایه کند:
 
