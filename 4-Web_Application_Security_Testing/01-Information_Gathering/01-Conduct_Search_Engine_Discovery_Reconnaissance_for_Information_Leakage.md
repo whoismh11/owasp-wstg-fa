@@ -122,8 +122,6 @@ cache:owasp.org
 
 •	اطلاعات حساس خرید آنلاین
 
-پایگاه های اطلاعاتی برای موتورهای جستجوی دیگر، مانند بینگ و شودان، از منابعی مانند [Google Hacking Diggity Project](https://resources.bishopfox.com/resources/tools/google-hacking-diggity/) در Bishop Fox در دسترس هستند.
-
 ## اصلاح
 
 قبل از ارسال آنلاین، حساسیت اطلاعات طراحی و پیکربندی را به دقت در نظر بگیرید.
