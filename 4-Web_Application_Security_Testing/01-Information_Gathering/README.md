@@ -11,3 +11,7 @@
 4.1.4 [Enumerate Applications on Webserver (شمارش برنامه ها در وب سرور)](04-Enumerate_Applications_on_Webserver.md)
 
 4.1.5 [Review Webpage Content for Information Leakage (بررسی محتوای صفحه وب برای نشت اطلاعات)](05-Review_Webpage_Content_for_Information_Leakage.md)
+
+4.1.6 [Identify Application Entry Points (شناسایی نقاط ورودی برنامه)](06-Identify_Application_Entry_Points.md)
+
+4.1.7 [Map Execution Paths Through Application (مسیرهای اجرای نقشه از طریق برنامه)](07-Map_Execution_Paths_Through_Application.md)
