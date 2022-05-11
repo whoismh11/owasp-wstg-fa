@@ -195,7 +195,7 @@ Google is built by a large team of engineers, designers, researchers, robots, an
 
 بررسی RFC یا پیش نویس ها و ایجاد فهرستی برای ارائه به یک خزنده یا fuzzer برای یک آزمایش کننده نسبتاً ساده است تا وجود یا محتوای چنین فایل هایی را تأیید کند.
 
-## ابزار ها
+## ابزارها
 
 • Browser (مرورگر) &#x202b;(مشاهده عملکرد منبع یا Dev Tools)
 
