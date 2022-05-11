@@ -195,7 +195,7 @@ Subject: C = US, ST = California, L = Los Angeles, O = Internet Corporation for 
 DNS:www.example.org, DNS:example.com, DNS:example.edu, DNS:example.net, DNS:example.org, DNS:www.example.com, DNS:www.example.edu, DNS:www.example.net
 ```
 
-## ابزار ها
+## ابزارها
 
 • ابزارهای جستجوی DNS مانند `nslookup` ،`dig` و موارد مشابه.
 
