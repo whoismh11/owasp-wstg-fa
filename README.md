@@ -28,6 +28,10 @@
 
 #### 4.1.5 [Review Webpage Content for Information Leakage (بررسی محتوای صفحه وب برای نشت اطلاعات)](4-Web_Application_Security_Testing/01-Information_Gathering/05-Review_Webpage_Content_for_Information_Leakage.md)
 
+#### 4.1.6 [Identify Application Entry Points (شناسایی نقاط ورودی برنامه)](4-Web_Application_Security_Testing/01-Information_Gathering/06-Identify_Application_Entry_Points.md)
+
+#### 4.1.7 [Map Execution Paths Through Application (مسیرهای اجرای نقشه از طریق برنامه)](4-Web_Application_Security_Testing/01-Information_Gathering/07-Map_Execution_Paths_Through_Application.md)
+
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
 
 ## منبع
