@@ -43,3 +43,124 @@
 • همچنین به هر نوع هدر اضافی یا سفارشی که معمولاً دیده نمی شود توجه کنید (مانند `debug: false`).
 
 ### پاسخ ها
+
+• محل تنظیم کوکی های جدید (`Set-Cookie` سرصفحه (هدر))، اصلاح یا اضافه شدن به آن را مشخص کنید.
+• در طول پاسخ های معمولی (یعنی درخواست های اصلاح نشده) مکان هایی را که تغییر مسیرها وجود دارد (کد وضعیت HTTP 3xx)، کد وضعیت 400، به ویژه 403 ممنوعه (Forbidden)، و 500 خطای داخلی سرور (internal server errors) وجود دارد.
+• همچنین توجه داشته باشید که در کجا از هدرهای جالب استفاده می شود. به عنوان مثال، `Server: BIG-IP` نشان می دهد که سایت دارای بار متعادل است. بنابراین، اگر یک سایت دارای بار متعادل باشد و یک سرور به درستی پیکربندی نشده باشد، ممکن است آزمایش کننده مجبور باشد بسته به نوع متعادل سازی بار مورد استفاده، چندین درخواست برای دسترسی به سرور آسیب پذیر ارائه دهد.
+
+### آشکارساز سطح حمله OWASP &#x202b;(OWASP Attack Surface Detector)
+
+ابزار Attack Surface Detector (ASD) کد منبع را بررسی می کند و نقاط پایانی یک برنامه وب، پارامترهایی که این نقاط پایانی می پذیرند و نوع داده آن پارامترها را آشکار می کند. این شامل نقاط پایانی بدون پیوندی است که عنکبوت قادر به یافتن آن نخواهد بود یا پارامترهای اختیاری که کاملاً در کد سمت مشتری (client-side) استفاده نشده اند. همچنین این قابلیت را دارد که تغییرات سطح حمله را بین دو نسخه از یک برنامه محاسبه کند.
+
+آشکارساز سطح حمله به عنوان یک پلاگین (افزونه) برای ZAP و Burp Suite در دسترس است و یک ابزار خط فرمان نیز در دسترس است. ابزار خط فرمان سطح حمله را به عنوان یک خروجی JSON صادر می کند، که سپس می تواند توسط افزونه ZAP و Burp Suite استفاده شود. این برای مواردی مفید است که کد منبع مستقیماً در اختیار آزمایش کننده نفوذ قرار نمی گیرد. برای مثال، آزمایش کننده نفوذ می تواند فایل خروجی json را از مشتری (client) دریافت کند که نمی خواهد خود کد منبع را ارائه کند.
+
+### نحوه استفاده
+
+فایل CLI jar برای دانلود از [https://github.com/secdec/attack-surface-detector-cli/releases](https://github.com/secdec/attack-surface-detector-cli/releases) در دسترس است.
+
+می توانید دستور زیر را برای ASD اجرا کنید تا نقاط پایانی را از کد منبع برنامه وب مورد نظر شناسایی کنید.
+
+`java -jar attack-surface-detector-cli-1.3.5.jar <source-code-path> [flags]`
+
+در اینجا مثالی از اجرای دستور در برابر [OWASP RailsGoat](https://github.com/OWASP/railsgoat) آورده شده است.
+
+```text
+$ java -jar attack-surface-detector-cli-1.3.5.jar railsgoat/
+Beginning endpoint detection for '<...>/railsgoat' with 1 framework types
+Using framework=RAILS
+[0] GET: /login (0 variants): PARAMETERS={url=name=url, paramType=QUERY_STRING, dataType=STRING}; FILE=/app/controllers/sessions_contro
+ller.rb (lines '6'-'9')
+[1] GET: /logout (0 variants): PARAMETERS={}; FILE=/app/controllers/sessions_controller.rb (lines '33'-'37')
+[2] POST: /forgot_password (0 variants): PARAMETERS={email=name=email, paramType=QUERY_STRING, dataType=STRING}; FILE=/app/controllers/
+password_resets_controller.rb (lines '29'-'38')
+[3] GET: /password_resets (0 variants): PARAMETERS={token=name=token, paramType=QUERY_STRING, dataType=STRING}; FILE=/app/controllers/p
+assword_resets_controller.rb (lines '19'-'27')
+[4] POST: /password_resets (0 variants): PARAMETERS={password=name=password, paramType=QUERY_STRING, dataType=STRING, user=name=user, paramType=QUERY_STRING, dataType=STRING, confirm_password=name=confirm_password, paramType=QUERY_STRING, dataType=STRING}; FILE=/app/controllers/password_resets_controller.rb (lines '5'-'17')
+[5] GET: /sessions/new (0 variants): PARAMETERS={url=name=url, paramType=QUERY_STRING, dataType=STRING}; FILE=/app/controllers/sessions_controller.rb (lines '6'-'9')
+[6] POST: /sessions (0 variants): PARAMETERS={password=name=password, paramType=QUERY_STRING, dataType=STRING, user_id=name=user_id, paramType=SESSION, dataType=STRING, remember_me=name=remember_me, paramType=QUERY_STRING, dataType=STRING, url=name=url, paramType=QUERY_STRING, dataType=STRING, email=name=email, paramType=QUERY_STRING, dataType=STRING}; FILE=/app/controllers/sessions_controller.rb (lines '11'-'31')
+[7] DELETE: /sessions/{id} (0 variants): PARAMETERS={}; FILE=/app/controllers/sessions_controller.rb (lines '33'-'37')
+[8] GET: /users (0 variants): PARAMETERS={}; FILE=/app/controllers/api/v1/users_controller.rb (lines '9'-'11')
+[9] GET: /users/{id} (0 variants): PARAMETERS={}; FILE=/app/controllers/api/v1/users_controller.rb (lines '13'-'15')
+... snipped ...
+[38] GET: /api/v1/mobile/{id} (0 variants): PARAMETERS={id=name=id, paramType=QUERY_STRING, dataType=STRING, class=name=class, paramType=QUERY_STRING, dataType=STRING}; FILE=/app/controllers/api/v1/mobile_controller.rb (lines '8'-'13')
+[39] GET: / (0 variants): PARAMETERS={url=name=url, paramType=QUERY_STRING, dataType=STRING}; FILE=/app/controllers/sessions_controller.rb (lines '6'-'9')
+Generated 40 distinct endpoints with 0 variants for a total of 40 endpoints
+Successfully validated serialization for these endpoints
+0 endpoints were missing code start line
+0 endpoints were missing code end line
+0 endpoints had the same code start and end line
+Generated 36 distinct parameters
+Generated 36 total parameters
+- 36/36 have their data type
+- 0/36 have a list of accepted values
+- 36/36 have their parameter type
+--- QUERY_STRING: 35
+--- SESSION: 1
+Finished endpoint detection for '<...>/railsgoat'
+----------
+-- DONE --
+0 projects had duplicate endpoints
+Generated 40 distinct endpoints
+Generated 40 total endpoints
+Generated 36 distinct parameters
+Generated 36 total parameters
+1/1 projects had endpoints generated
+To enable logging include the -debug argument
+```
+
+همچنین می توانید یک فایل خروجی JSON با استفاده از پرچم (flag) `json-` ایجاد کنید، که می تواند توسط افزونه برای ZAP و Burp Suite استفاده شود. برای جزئیات بیشتر به لینک های زیر مراجعه کنید.
+
+• [صفحه اصلی پلاگین ASD برای OWASP ZAP](https://github.com/secdec/attack-surface-detector-zap/wiki)
+
+• [صفحه اصلی پلاگین ASD برای PortSwigger Burp](https://github.com/secdec/attack-surface-detector-burp/wiki)
+
+### تست نقاط ورودی برنامه (Testing for Application Entry Points)
+
+در زیر دو مثال در مورد نحوه بررسی نقاط ورودی برنامه آورده شده است.
+
+#### مثال 1
+
+این مثال یک درخواست GET را نشان می دهد که می تواند یک کالا را از یک برنامه خرید آنلاین خریداری کند.
+
+```text
+GET /shoppingApp/buyme.asp?CUSTOMERID=100&ITEM=z101a&PRICE=62.50&IP=x.x.x.x HTTP/1.1
+Host: x.x.x.x
+Cookie: SESSIONID=Z29vZCBqb2IgcGFkYXdhIG15IHVzZXJuYW1lIGlzIGZvbyBhbmQgcGFzc3dvcmQgaXMgYmFy
+```
+
+تمام پارامترهای درخواست مانند CUSTOMERID، ITEM، PRICE، IP و Cookie که فقط می توانند پارامترها یا پارامترهای مورد استفاده برای وضعیت جلسه کدگذاری شوند.
+
+#### مثال 2
+
+این مثال یک درخواست POST را نشان می دهد که شما را به یک برنامه وارد می کند.
+
+```text
+POST /example/authenticate.asp?service=login HTTP/1.1
+Host: x.x.x.x
+Cookie: SESSIONID=dGhpcyBpcyBhIGJhZCBhcHAgdGhhdCBzZXRzIHByZWRpY3RhYmxlIGNvb2tpZXMgYW5kIG1pbmUgaXMgMTIzNA==;CustomCookie=00my00trusted00ip00is00x.x.x.x00
+
+user=admin&pass=pass123&debug=true&fromtrustIP=true
+```
+
+می توان توجه داشت که پارامترها در چندین مکان ارسال می شوند:
+
+1- در رشته پرس و جو: `service`
+
+2- در هدر کوکی: `SESSIONID`, `CustomCookie`
+
+3- در بدنه درخواست: `user`, `pass`, `debug`,`fromtrustIP`
+
+وجود انواع مکان های تزریق، فرصت های زنجیره ای را برای مهاجم فراهم می کند که می تواند شانس یافتن یک اشکال در کد مدیریت را افزایش دهد.
+
+## ابزارها
+
+• [OWASP Zed Attack Proxy (ZAP)](https://www.zaproxy.org/)
+
+• [Burp Suite](https://www.portswigger.net/burp/)
+
+• [Fiddler](https://www.telerik.com/fiddler)
+
+## منابع
+
+• [RFC 2616 – Hypertext Transfer Protocol – HTTP 1.1](https://tools.ietf.org/html/rfc2616)
+• [OWASP Attack Surface Detector](https://owasp.org/www-project-attack-surface-detector/)
