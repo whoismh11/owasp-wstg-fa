@@ -16,7 +16,7 @@
 
 ## 1. [Frontispiece (سرلوحه)](1-Frontispiece/)
 
-## 4. [Web Application Security Testing (آزمایش امنیت برنامه های وب)](4-Web_Application_Security_Testing/)
+## 4. [Web Application Security Testing (آزمایش امنیت برنامه وب)](4-Web_Application_Security_Testing/)
 
 ### 4.0 [Introduction and Objectives (مقدمه و اهداف)](4-Web_Application_Security_Testing/00-Introduction_and_Objectives/README.md)
 
