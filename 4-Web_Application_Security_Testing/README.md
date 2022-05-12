@@ -1,6 +1,6 @@
 # Web Application Security Testing (fa-IR)
 
-آزمایش امنیت برنامه های وب (فارسی)
+آزمایش امنیت برنامه وب (فارسی)
 
 4.0 [Introduction and Objectives (مقدمه و اهداف)](00-Introduction_and_Objectives/README.md)
 
