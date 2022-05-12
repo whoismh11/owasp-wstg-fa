@@ -12,6 +12,10 @@
 
 ## فهرست مطالب
 
+## 0. [Foreword by Eoin Keary &#x202b;(پیشگفتار Eoin Keary)](0-Foreword/README.md)
+
+## 1. [Frontispiece (سرلوحه)](1-Frontispiece/)
+
 ## 4. [Web Application Security Testing (آزمایش امنیت برنامه های وب)](4-Web_Application_Security_Testing/)
 
 ### 4.0 [Introduction and Objectives (مقدمه و اهداف)](4-Web_Application_Security_Testing/00-Introduction_and_Objectives/README.md)
@@ -31,6 +35,10 @@
 #### 4.1.6 [Identify Application Entry Points (شناسایی نقاط ورودی برنامه)](4-Web_Application_Security_Testing/01-Information_Gathering/06-Identify_Application_Entry_Points.md)
 
 #### 4.1.7 [Map Execution Paths Through Application (مسیرهای اجرای نقشه از طریق برنامه)](4-Web_Application_Security_Testing/01-Information_Gathering/07-Map_Execution_Paths_Through_Application.md)
+
+#### 4.1.8 [Fingerprint Web Application Framework (چارچوب انگشت نگاری برنامه وب)](4-Web_Application_Security_Testing/01-Information_Gathering/08-Fingerprint_Web_Application_Framework.md)
+
+#### 4.1.9 [Fingerprint Web Application (انگشت نگاری برنامه وب)](4-Web_Application_Security_Testing/01-Information_Gathering/09-Fingerprint_Web_Application.md)
 
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
 
