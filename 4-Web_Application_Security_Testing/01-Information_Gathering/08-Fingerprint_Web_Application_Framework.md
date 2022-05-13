@@ -150,9 +150,11 @@ https://wiki.owasp.org/index.php?title=Fingerprint_Web_Application_Framework&act
 
 در اینجا برخی از پسوندهای رایج فایل های وب و فناوری های مرتبط آورده شده است:
 
-`.php` -- PHP
-`.aspx` -- Microsoft ASP.NET
-`.jsp` -- صفحات سرور جاوا
+• `.php` -- PHP
+
+• `.aspx` -- Microsoft ASP.NET
+
+• `.jsp` -- صفحات سرور جاوا
 
 #### پیغام خطا(Error Messages)
 
@@ -205,10 +207,13 @@ https://wiki.owasp.org/index.php?title=Fingerprint_Web_Application_Framework&act
 
 #### نشانگرهای عمومی (General Markers)
 
-- `%framework_name%`
-- `powered by`
-- `built upon`
-- `running`
+• `%framework_name%`
+
+• `powered by`
+
+• `built upon`
+
+• `running`
 
 #### نشانگرهای خاص (Specific Markers)
 
@@ -229,3 +234,45 @@ https://wiki.owasp.org/index.php?title=Fingerprint_Web_Application_Framework&act
 لیستی از ابزارهای عمومی و شناخته شده در زیر ارائه شده است. همچنین بسیاری از ابزارهای کاربردی دیگر و همچنین ابزارهای انگشت نگاری مبتنی بر چارچوب وجود دارد.
 
 ### <div dir="rtl">WhatWeb</div>
+
+وب سایت: [https://github.com/urbanadventurer/WhatWeb](https://github.com/urbanadventurer/WhatWeb)
+
+در حال حاضر یکی از بهترین ابزارهای انگشت نگاری موجود در بازار است. در یک ساخت پیش فرض کالی لینوکس ([Kali Linux](https://www.kali.org/)) گنجانده شده است. زبان: روبی (Ruby) مچ شده برای انگشت نگاری با:
+
+• رشته های متنی (حساس به حروف کوچک و بزرگ)
+
+• عبارات با قاعده
+
+• پرس و جو های پایگاه داده گوگل هک (مجموعه محدودی از کلمات کلیدی)
+
+• هش های MD5
+
+• تشخیص URL
+
+• الگوهای تگ HTML
+
+• کد ruby سفارشی برای عملیات غیرفعال و تهاجمی
+
+• خروجی نمونه در تصویر زیر ارائه شده است:
+
+![Whatweb Output sample](images/Whatweb-sample.png)\
+*شکل 8.1.4-8: نمونه خروجی Whatweb*
+
+### <div dir="rtl">Wappalyzer</div>
+
+وب سایت: [https://www.wappalyzer.com/](https://www.wappalyzer.com/)
+
+ا Wappalyzer در مدل های چندگانه موجود است که محبوب ترین آنها احتمالاً افزونه های Firefox/Chrome است. آنها فقط بر روی تطبیق عبارات معمولی کار می کنند و به هیچ چیز دیگری غیر از صفحه برای بارگذاری در مرورگر نیاز ندارند. به طور کامل در سطح مرورگر کار می کند و نتایج را در قالب آیکون می دهد. اگرچه گاهی اوقات دارای نکات مثبت کاذب است، اما این بسیار مفید است که بدانید چه فناوری هایی برای ساختن یک وب سایت هدف بلافاصله پس از مرور یک صفحه استفاده شده است.
+
+نمونه خروجی یک افزونه در تصویر زیر ارائه شده است.
+
+![Wappalyzer Output for OWASP Website](images/Owasp-wappalyzer.png)\
+*شکل 8.1.4-9: خروجی Wappalyzer برای وب سایت OWASP*
+
+## منابع
+
+### کاغذهای سفید
+
+• [Saumil Shah: "An Introduction to HTTP fingerprinting"](https://web.archive.org/web/20190526182734/https://net-square.com/httprint_paper.html)
+
+• [Anant Shrivastava : "Web Application Finger Printing"](https://anantshri.info/articles/web_app_finger_printing.html)
