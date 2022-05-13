@@ -118,3 +118,114 @@ Configure::write('Session.cookie', 'CAKEPHP');
 *شکل 8.1.4-3: صفحه پایین Banshee*
 
 ### فایل ها و پوشه های خاص (Specific Files and Folders)
+
+رویکرد دیگری وجود دارد که به مهاجم یا آزمایش کننده کمک می کند تا برنامه ها یا اجزای سازنده را با دقت بالا شناسایی کند. هر جزء وب ساختار فایل و پوشه خاص خود را در سرور دارد. اشاره شده است که می توان مسیر خاصی را از منبع صفحه HTML مشاهده کرد اما گاهی اوقات آنها به صراحت در آنجا ارائه نمی شوند و همچنان در سرور قرار دارند.
+
+برای کشف آنها از تکنیکی به نام مرور اجباری (forced browsing) یا "dirbusting" استفاده می شود. Dirbusting عبارت است از وادار کردن یک هدف با نام پوشه ها و فایل های شناخته شده و نظارت بر پاسخ های HTTP برای شمارش محتوای سرور. از این اطلاعات می توان هم برای یافتن فایل های پیش فرض و حمله به آنها و هم برای انگشت نگاری برنامه وب استفاده کرد. Dirbusting را می توان به روش های مختلفی انجام داد، مثال زیر یک حمله موفقیت آمیز dirbusting علیه یک هدف مبتنی بر وردپرس را با کمک لیست تعریف شده و عملکرد مزاحم Burp Suite نشان می دهد.
+
+![Dirbusting with Burp](images/Wordpress_dirbusting.png)\
+*شکل 8.1.4-4: Dirbusting با Burp*
+
+ما می توانیم ببینیم که برای برخی از پوشه های خاص وردپرس (به عنوان مثال، `/wp-includes/` و `/wp-admin/` و `/wp-content/`) پاسخهای HTTP به ترتیب 403 (ممنوع)، 302 (یافت، هدایت به `wp-login.php`) و 200 (OK) هستند. این نشان دهنده خوبی است که هدف از وردپرس پشتیبانی می کند. به همین ترتیب می توان پوشه های پلاگین برنامه های مختلف و نسخه های آنها را پاکسازی کرد. در تصویر زیر می توانید یک فایل CHANGELOG معمولی از یک پلاگین Drupal را مشاهده کنید که اطلاعاتی در مورد برنامه مورد استفاده ارائه می دهد و یک نسخه آسیب پذیر افزونه را فاش می کند.
+
+![Drupal Botcha Disclosure](images/Drupal_botcha_disclosure.png)\
+*شکل 8.1.4-5: افشای Drupal Botcha*
+
+نکته: قبل از شروع پخش، ابتدا فایل `robots.txt` را بررسی کنید. گاهی اوقات پوشه های خاص برنامه و سایر اطلاعات حساس را می توان در آنجا یافت. نمونه ای از چنین فایل `robots.txt` در تصویر زیر ارائه شده است.
+
+![Robots Info Disclosure](images/Robots-info-disclosure.png)\
+*شکل 8.1.4-6: افشای اطلاعات ربات ها*
+
+فایل ها و پوشه های خاص برای هر برنامه خاص متفاوت است. اگر برنامه یا مؤلفه شناسایی شده منبع باز باشد، ممکن است راه اندازی یک نصب موقت در طول آزمایش های نفوذ برای درک بهتر زیرساخت ها یا قابلیت هایی که ارائه می شود و چه فایل هایی ممکن است روی سرور باقی بماند، ارزش داشته باشد. با این حال، چندین لیست فایل خوب در حال حاضر وجود دارد. یکی از مثال های خوب، [فهرست واژه های FuzzDB از فایل ها/پوشه های قابل پیش بینی](https://github.com/fuzzdb-project/fuzzdb) است.
+
+#### پسوندهای فایل (File Extensions)
+
+ا URL ها ممکن است شامل پسوندهای فایل باشند که می تواند به شناسایی پلتفرم یا فناوری وب نیز کمک کند.
+
+به عنوان مثال، ویکی OWASP از PHP استفاده می کند:
+
+```text
+https://wiki.owasp.org/index.php?title=Fingerprint_Web_Application_Framework&action=edit&section=4
+```
+
+در اینجا برخی از پسوندهای رایج فایل های وب و فناوری های مرتبط آورده شده است:
+
+`.php` -- PHP
+`.aspx` -- Microsoft ASP.NET
+`.jsp` -- صفحات سرور جاوا
+
+#### پیغام خطا(Error Messages)
+
+همانطور که در تصویر زیر مشاهده می شود، مسیر فایل سیستم فهرست شده به استفاده از وردپرس (`wp-content`) اشاره دارد. همچنین آزمایش کنندگان باید بدانند که وردپرس مبتنی بر PHP است (`functions.php`).
+
+![WordPress Parse error](images/wp-syntaxerror.png)\
+*شکل 8.1.4-7: خطای تجزیه وردپرس*
+
+## شناسه های مشترک (Common Identifiers)
+
+### کوکی ها (Cookies)
+
+| چارچوب    | نام کوکی                       |
+|--------------|-----------------------------------|
+| Zope         | zope3                             |
+| CakePHP      | cakephp                           |
+| Kohana       | kohanasession                     |
+| Laravel      | laravel_session                   |
+| phpBB        | phpbb3_                           |
+| WordPress    | wp-settings                       |
+| 1C-Bitrix    | BITRIX_                           |
+| AMPcms       | AMP                               |
+| Django CMS   | django                            |
+| DotNetNuke   | DotNetNukeAnonymous               |
+| e107         | e107_tz                           |
+| EPiServer    | EPiTrace, EPiServer               |
+| Graffiti CMS | graffitibot                       |
+| Hotaru CMS   | hotaru_mobile                     |
+| ImpressCMS   | ICMSession                        |
+| Indico       | MAKACSESSION                      |
+| InstantCMS   | InstantCMS[logdate]               |
+| Kentico CMS  | CMSPreferredCulture               |
+| MODx         | SN4[12symb]                       |
+| TYPO3        | fe_typo_user                      |
+| Dynamicweb   | Dynamicweb                        |
+| LEPTON       | lep[some_numeric_value]+sessionid |
+| Wix          | Domain=.wix.com                   |
+| VIVVO        | VivvoSessionId                    |
+
+### کد منبع HTML &#x202b;(HTML Source Code)
+
+| برنامه | کلمه کلیدی                                                                        |
+|-------------|--------------------------------------------------------------------------------|
+| WordPress   | `<meta name="generator" content="WordPress 3.9.2" />`                          |
+| phpBB       | `<body id="phpbb"`                                                             |
+| Mediawiki   | `<meta name="generator" content="MediaWiki 1.21.9" />`                         |
+| Joomla      | `<meta name="generator" content="Joomla! - Open Source Content Management" />` |
+| Drupal      | `<meta name="Generator" content="Drupal 7 (http://drupal.org)" />`             |
+| DotNetNuke  | `DNN Platform - [http://www.dnnsoftware.com](http://www.dnnsoftware.com)`      |
+
+#### نشانگرهای عمومی (General Markers)
+
+- `%framework_name%`
+- `powered by`
+- `built upon`
+- `running`
+
+#### نشانگرهای خاص (Specific Markers)
+
+| چارچوب         | کلمه کلیدی                        |
+|-------------------|--------------------------------|
+| Adobe ColdFusion  | `<!-- START headerTags.cfm`    |
+| Microsoft ASP.NET | `__VIEWSTATE`                  |
+| ZK                | `<!-- ZK`                      |
+| Business Catalyst | `<!-- BC_OBNW -->`             |
+| Indexhibit        | `ndxz-studio`                  |
+
+## اصلاح
+
+در حالی که می توان تلاش هایی برای استفاده از نام های مختلف کوکی ها (از طریق تغییر تنظیمات)، مخفی کردن یا تغییر مسیرهای فایل/دایرکتوری (از طریق بازنویسی یا تغییر کد منبع)، حذف هدرهای شناخته شده و غیره انجام داد. صاحبان/مدیران سیستم باید بدانند که این تلاش ها فقط باعث کاهش ابتدایی ترین دشمنان می شود. زمان/تلاش ممکن است برای آگاهی ذینفعان و فعالیت های تعمیر و نگهداری راه حل بهتر استفاده شود.
+
+## ابزارها
+
+لیستی از ابزارهای عمومی و شناخته شده در زیر ارائه شده است. همچنین بسیاری از ابزارهای کاربردی دیگر و همچنین ابزارهای انگشت نگاری مبتنی بر چارچوب وجود دارد.
+
+### <div dir="rtl">WhatWeb</div>
