@@ -10,7 +10,7 @@
 
 سه مورد جدید، چهار مورد با تغییرات نام گذاری و محدوده، و مقداری ادغام در 10 مورد برتر برای سال 2021 وجود دارد. ما نام ها را در صورت لزوم تغییر داده ایم تا روی علت اصلی بیش از نماد تمرکز کنیم.
 
-<div align="center">![OWASP Top 10 Mapping](images/mapping.png)</div>
+<p align="center">![OWASP Top 10 Mapping](images/mapping.png)</p>
 
 ### A01:2021-Broken Access Control (کنترل دسترسی خراب)
 
