@@ -12,7 +12,7 @@
 
 ## اهداف آزمایش
 
-• برنامه مورد نظر را نقشه برداری کنید و گردش کار اصلی را درک کنید.
+- برنامه مورد نظر را نقشه برداری کنید و گردش کار اصلی را درک کنید.
 
 ## چگونه آزمایش کنیم
 
@@ -20,11 +20,9 @@
 
 روش های مختلفی برای نزدیک شدن به آزمایش و اندازه گیری پوشش کد وجود دارد:
 
-• **مسیر (Path)** - هر یک از مسیرها را از طریق یک برنامه که شامل آزمایش تجزیه و تحلیل ارزش ترکیبی و مرزی برای هر مسیر تصمیم گیری است، آزمایش کنید. در حالی که این رویکرد دقت را ارائه می دهد، تعداد مسیرهای قابل آزمایش با هر شاخه تصمیم گیری به طور تصاعدی افزایش می یابد.
-
-• **جریان داده (یا تجزیه و تحلیل لکه دار) (Data Flow (or Taint Analysis))** - تخصیص متغیرها را از طریق تعامل خارجی (معمولاً کاربران) آزمایش می کند. بر روی نقشه برداری از جریان، تبدیل و استفاده از داده ها در سراسر یک برنامه تمرکز دارد.
-
-• **نژاد (Race)** - چندین نمونه از برنامه را همزمان آزمایش می کند که داده های مشابه را دستکاری می کند.
+- **مسیر (Path)** - هر یک از مسیرها را از طریق یک برنامه که شامل آزمایش تجزیه و تحلیل ارزش ترکیبی و مرزی برای هر مسیر تصمیم گیری است، آزمایش کنید. در حالی که این رویکرد دقت را ارائه می دهد، تعداد مسیرهای قابل آزمایش با هر شاخه تصمیم گیری به طور تصاعدی افزایش می یابد.
+- **جریان داده (یا تجزیه و تحلیل لکه دار) (Data Flow (or Taint Analysis))** - تخصیص متغیرها را از طریق تعامل خارجی (معمولاً کاربران) آزمایش می کند. بر روی نقشه برداری از جریان، تبدیل و استفاده از داده ها در سراسر یک برنامه تمرکز دارد.
+- **نژاد (Race)** - چندین نمونه از برنامه را همزمان آزمایش می کند که داده های مشابه را دستکاری می کند.
 
 مبادله در مورد اینکه چه روشی استفاده می شود و هر روشی تا چه حد استفاده می شود باید با مالک برنامه مذاکره شود. همچنین می توان رویکردهای ساده تری را اتخاذ کرد، از جمله پرسیدن از مالک برنامه ای که به خصوص در مورد چه توابع یا بخش های کدی نگران هستند و چگونه می توان به آن بخش های کد دسترسی پیدا کرد.
 
@@ -39,20 +37,16 @@
 
 ا ZAP گزینه های اسپایدرینگ خودکار مختلفی را ارائه می دهد که می تواند بر اساس نیازهای آزمایش کننده مورد استفاده قرار گیرد:
 
-• عنکبوت ([Spider](https://www.zaproxy.org/docs/desktop/start/features/spider/))
-
-• عنکبوت AJAX &#x202b;([AJAX Spider](https://www.zaproxy.org/docs/desktop/addons/ajax-spider/))
-
-• پشتیبانی OpenAPI &#x202b;([OpenAPI Support](https://www.zaproxy.org/docs/desktop/addons/openapi-support/))
+- عنکبوت ([Spider](https://www.zaproxy.org/docs/desktop/start/features/spider/))
+- عنکبوت AJAX &#x202b;([AJAX Spider](https://www.zaproxy.org/docs/desktop/addons/ajax-spider/))
+- پشتیبانی OpenAPI &#x202b;([OpenAPI Support](https://www.zaproxy.org/docs/desktop/addons/openapi-support/))
 
 ## ابزارها
 
-• پروکسی حمله Zed (ZAP) &#x202b;([Zed Attack Proxy (ZAP)](https://github.com/zaproxy/zaproxy))
-
-• لیست نرم افزارهای صفحه گسترده ([List of spreadsheet software](https://en.wikipedia.org/wiki/List_of_spreadsheet_software))
-
-• نرم افزار نمودارسازی ([Diagramming software](https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software))
+- پروکسی حمله Zed (ZAP) &#x202b;([Zed Attack Proxy (ZAP)](https://github.com/zaproxy/zaproxy))
+- لیست نرم افزارهای صفحه گسترده ([List of spreadsheet software](https://en.wikipedia.org/wiki/List_of_spreadsheet_software))
+- نرم افزار نمودارسازی ([Diagramming software](https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software))
 
 ## منابع
 
-• پوشش کد ([Code Coverage](https://en.wikipedia.org/wiki/Code_coverage))
+- پوشش کد ([Code Coverage](https://en.wikipedia.org/wiki/Code_coverage))
