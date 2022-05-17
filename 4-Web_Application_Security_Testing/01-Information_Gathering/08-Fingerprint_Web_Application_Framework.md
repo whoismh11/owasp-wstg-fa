@@ -12,7 +12,7 @@
 
 ## اهداف آزمایش
 
-• انگشت نگاری اجزای مورد استفاده توسط برنامه های وب.
+- انگشت نگاری اجزای مورد استفاده توسط برنامه های وب.
 
 ## چگونه آزمایش کنیم
 
@@ -20,17 +20,12 @@
 
 چندین مکان متداول (رایج) وجود دارد که باید به منظور شناسایی چارچوب ها یا مؤلفه ها در نظر گرفته شود:
 
-• هدرهای HTTP
-
-• کوکی ها
-
-• کد منبع (سورس کد) HTML
-
-• فایل ها و پوشه های خاص
-
-• پسوند فایل
-
-• پیغام خطا
+- هدرهای HTTP
+- کوکی ها
+- کد منبع (سورس کد) HTML
+- فایل ها و پوشه های خاص
+- پسوند فایل
+- پیغام خطا
 
 #### هدرهای HTTP &#x202b;(HTTP Headers)
 
@@ -113,7 +108,7 @@ Configure::write('Session.cookie', 'CAKEPHP');
 *شکل 2-4.1.8: نمونه منبع HTML چارچوب ZK*
 
 اغلب چنین اطلاعاتی در بخش `<head>` پاسخ های HTTP، در تگ `<meta>` ها یا در انتهای صفحه قرار می گیرند. با این وجود، کل پاسخ ها باید تجزیه و تحلیل شوند، زیرا می تواند برای اهداف دیگری مانند بازرسی سایر کامنت های مفید و زمینه های پنهان مفید باشد. گاهی اوقات، توسعه دهندگان وب اهمیت زیادی به مخفی کردن اطلاعات مربوط به فریمورک )چارچوب) ها یا اجزای مورد استفاده نمی دهند. هنوز هم ممکن است به چیزی شبیه به این در پایین صفحه برخورد کنید:
-  
+
 ![Banshee Bottom Page](images/Banshee_bottom_page.png)\
 *شکل 3-4.1.8: صفحه پایین Banshee*
 
@@ -150,11 +145,9 @@ https://wiki.owasp.org/index.php?title=Fingerprint_Web_Application_Framework&act
 
 در اینجا برخی از پسوندهای رایج فایل های وب و فناوری های مرتبط آورده شده است:
 
-• `.php` -- PHP
-
-• `.aspx` -- Microsoft ASP.NET
-
-• `.jsp` -- صفحات سرور جاوا
+- `.php` -- PHP
+- `.aspx` -- Microsoft ASP.NET
+- `.jsp` -- صفحات سرور جاوا
 
 #### پیغام خطا(Error Messages)
 
@@ -207,13 +200,10 @@ https://wiki.owasp.org/index.php?title=Fingerprint_Web_Application_Framework&act
 
 #### نشانگرهای عمومی (General Markers)
 
-• `%framework_name%`
-
-• `powered by`
-
-• `built upon`
-
-• `running`
+- `%framework_name%`
+- `powered by`
+- `built upon`
+- `running`
 
 #### نشانگرهای خاص (Specific Markers)
 
@@ -239,21 +229,14 @@ https://wiki.owasp.org/index.php?title=Fingerprint_Web_Application_Framework&act
 
 در حال حاضر یکی از بهترین ابزارهای انگشت نگاری موجود در بازار است. در یک ساخت پیش فرض کالی لینوکس ([Kali Linux](https://www.kali.org/)) گنجانده شده است. زبان: روبی (Ruby) مچ شده برای انگشت نگاری با:
 
-• رشته های متنی (حساس به حروف کوچک و بزرگ)
-
-• عبارات با قاعده
-
-• پرس و جو های پایگاه داده گوگل هک (مجموعه محدودی از کلمات کلیدی)
-
-• هش های MD5
-
-• تشخیص URL
-
-• الگوهای تگ HTML
-
-• کد ruby سفارشی برای عملیات غیرفعال و تهاجمی
-
-• خروجی نمونه در تصویر زیر ارائه شده است:
+- رشته های متنی (حساس به حروف کوچک و بزرگ)
+- عبارات با قاعده
+- پرس و جو های پایگاه داده گوگل هک (مجموعه محدودی از کلمات کلیدی)
+- هش های MD5
+- تشخیص URL
+- الگوهای تگ HTML
+- کد ruby سفارشی برای عملیات غیرفعال و تهاجمی
+- خروجی نمونه در تصویر زیر ارائه شده است:
 
 ![Whatweb Output sample](images/Whatweb-sample.png)\
 *شکل 8-4.1.8: نمونه خروجی Whatweb*
@@ -273,6 +256,5 @@ https://wiki.owasp.org/index.php?title=Fingerprint_Web_Application_Framework&act
 
 ### کاغذهای سفید
 
-• [Saumil Shah: &#x202b;"مقدمه ای بر انگشت نگاری HTTP"](https://web.archive.org/web/20190526182734/https://net-square.com/httprint_paper.html)
-
-• [Anant Shrivastava : "انگشت نگاری برنامه وب"](https://anantshri.info/articles/web_app_finger_printing.html)
+- [Saumil Shah: &#x202b;"مقدمه ای بر انگشت نگاری HTTP"](https://web.archive.org/web/20190526182734/https://net-square.com/httprint_paper.html)
+- [Anant Shrivastava : "انگشت نگاری برنامه وب"](https://anantshri.info/articles/web_app_finger_printing.html)
