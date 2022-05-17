@@ -16,11 +16,9 @@
 
 ## اهداف آزمایش
 
-• کامنت های صفحه وب، متادیتا ها، و تغییر مسیر برای یافتن هرگونه نشت اطلاعات را بررسی کنید.
-
-• فایل های جاوا اسکریپت را جمع آوری کنید و کد JS را برای درک بهتر برنامه و یافتن هرگونه نشت اطلاعات بررسی کنید.
-
-• مشخص کنید که آیا فایل های نقشه منبع یا سایر فایل های اشکال زدایی front-end وجود دارند یا خیر.
+- کامنت های صفحه وب، متادیتا ها، و تغییر مسیر برای یافتن هرگونه نشت اطلاعات را بررسی کنید.
+- فایل های جاوا اسکریپت را جمع آوری کنید و کد JS را برای درک بهتر برنامه و یافتن هرگونه نشت اطلاعات بررسی کنید.
+- مشخص کنید که آیا فایل های نقشه منبع یا سایر فایل های اشکال زدایی front-end وجود دارند یا خیر.
 
 ## چگونه آزمایش کنیم
 
@@ -55,11 +53,9 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
 ```
 
-• `strict.dtd` -- &#x202b;DTD سخت پیش فرض
-
-• `loose.dtd` -- &#x202b;DTD شل
-
-• `frameset.dtd` -- &#x202b;DTD برای اسناد فریم ست
+- `strict.dtd` -- &#x202b;DTD سخت پیش فرض
+- `loose.dtd` -- &#x202b;DTD شل
+- `frameset.dtd` -- &#x202b;DTD برای اسناد فریم ست
 
 برخی از `META` تگ ها بردارهای حمله فعال را ارائه نمی کنند، اما در عوض به مهاجم اجازه می دهند تا یک برنامه را نمایه کند:
 
@@ -159,32 +155,22 @@ var conString = "tcp://postgres:1234@localhost/postgres";
 
 ## ابزارها
 
-• [Wget](https://www.gnu.org/software/wget/wget.html)
-
-• Browser "view source" function &#x202b;(مرورگر عملگر "مشاهده منبع")
-
-• Eyeballs
-
-• [Curl](https://curl.haxx.se/)
-
-• [Zaproxy](https://www.zaproxy.org)
-
-• [Burp Suite](https://portswigger.net/burp)
-
-• [Waybackurls](https://github.com/tomnomnom/waybackurls)
-
-• [Google Maps API Scanner](https://github.com/ozguralp/gmapsapiscanner/)
+- [Wget](https://www.gnu.org/software/wget/wget.html)
+- Browser "view source" function &#x202b;(مرورگر عملگر "مشاهده منبع")
+- Eyeballs
+- [Curl](https://curl.haxx.se/)
+- [Zaproxy](https://www.zaproxy.org)
+- [Burp Suite](https://portswigger.net/burp)
+- [Waybackurls](https://github.com/tomnomnom/waybackurls)
+- [Google Maps API Scanner](https://github.com/ozguralp/gmapsapiscanner/)
 
 ## منابع
 
-• [KeyHacks](https://github.com/streaak/keyhacks)
-
-• [RingZer0 Online CTF](https://ringzer0ctf.com/challenges/104) - Challenge 104 "Admin Panel". &#x202b;(چالش 104 "پنل مدیریت")
+- [KeyHacks](https://github.com/streaak/keyhacks)
+- [RingZer0 Online CTF](https://ringzer0ctf.com/challenges/104) - Challenge 104 "Admin Panel". &#x202b;(چالش 104 "پنل مدیریت")
 
 ### کاغذهای سفید
 
-• [HTML version 4.01](https://www.w3.org/TR/1999/REC-html401-19991224)
-
-• [XHTML](https://www.w3.org/TR/2010/REC-xhtml-basic-20101123/)
-
-• [HTML version 5](https://www.w3.org/TR/html5/)
+- [HTML version 4.01](https://www.w3.org/TR/1999/REC-html401-19991224)
+- [XHTML](https://www.w3.org/TR/2010/REC-xhtml-basic-20101123/)
+- [HTML version 5](https://www.w3.org/TR/html5/)
