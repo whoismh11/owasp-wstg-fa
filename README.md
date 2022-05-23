@@ -36,6 +36,10 @@
 
 #### 4.1.9 [Fingerprint Web Application (انگشت نگاری برنامه وب)](4-Web_Application_Security_Testing/01-Information_Gathering/09-Fingerprint_Web_Application.md)
 
+#### 4.1.10 [Map Application Architecture (معماری برنامه نقشه)](4-Web_Application_Security_Testing/01-Information_Gathering/10-Map_Application_Architecture.md)
+
+### 4.2 [Configuration and Deployment Management Testing (آزمایش مدیریت پیکربندی و استقرار)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README.md)
+
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
 
 ## منبع
