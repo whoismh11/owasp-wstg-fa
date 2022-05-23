@@ -40,6 +40,8 @@
 
 ### 4.2 [Configuration and Deployment Management Testing (آزمایش مدیریت پیکربندی و استقرار)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/README.md)
 
+#### 4.2.1 [Test Network Infrastructure Configuration (آزمایش پیکربندی زیرساخت شبکه)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/01-Test_Network_Infrastructure_Configuration.md)
+
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
 
 ## منبع
