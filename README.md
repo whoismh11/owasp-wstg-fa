@@ -42,6 +42,12 @@
 
 #### 4.2.1 [Test Network Infrastructure Configuration (آزمایش پیکربندی زیرساخت شبکه)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/01-Test_Network_Infrastructure_Configuration.md)
 
+#### 4.2.2 [Test Application Platform Configuration (آزمایش پیکربندی پلتفرم برنامه)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/02-Test_Application_Platform_Configuration.md)
+
+#### 4.2.3 [Test File Extensions Handling for Sensitive Information (مدیریت پسوند فایل آزمایشی برای اطلاعات حساس)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/03-Test_File_Extensions_Handling_for_Sensitive_Information.md)
+
+#### 4.2.4 [Review Old Backup and Unreferenced Files for Sensitive Information (فایل های پشتیبان قدیمی و بدون مرجع را برای اطلاعات حساس مرور کنید)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/04-Review_Old_Backup_and_Unreferenced_Files_for_Sensitive_Information.md)
+
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
 
 ## منبع
