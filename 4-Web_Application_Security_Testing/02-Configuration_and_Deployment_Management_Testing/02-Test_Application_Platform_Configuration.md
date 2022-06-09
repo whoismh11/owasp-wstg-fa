@@ -120,3 +120,68 @@
 
 #### ذخیره‌سازی لاگ (Log Storage)
 
+اگر لاگ ها به‌درستی ذخیره نشده باشند، می‌توانند شرایط انکار سرویس را معرفی کنند. هر مهاجمی که منابع کافی داشته باشد می‌تواند تعداد کافی درخواست ایجاد کند که فضای اختصاص داده شده برای فایل‌های لاگ را پر کند، در صورتی که به طور خاص از انجام این کار جلوگیری نشود. با این حال، اگر سرور به درستی پیکربندی نشده باشد، فایل های گزارش (لاگ) در همان پارتیشن دیسکی که برای نرم افزار سیستم عامل یا خود برنامه استفاده می شود، ذخیره می شود. این بدان معناست که اگر دیسک پر شود، سیستم عامل ممکن است از کار بیفتد زیرا قادر به نوشتن روی دیسک نیست.
+
+معمولاً در سیستم‌های یونیکس، لاگ‌ها در var/ قرار می‌گیرند (اگرچه برخی از نصب‌های سرور ممکن است در opt/ یا usr/local/ باشند) و مهم است که مطمئن شوید دایرکتوری‌هایی که لاگ‌ها در آن ذخیره می‌شوند در یک پارتیشن جداگانه هستند. در برخی موارد و به منظور جلوگیری از تحت تاثیر قرار گرفتن لاگ های سیستم، دایرکتوری log خود نرم افزار سرور (مانند var/log/apache/ در وب سرور آپاچی) باید در یک پارتیشن اختصاصی ذخیره شود.
+
+این بدان معنا نیست که لاگ‌ها باید رشد کنند تا سیستم فایلی که در آن قرار دارند پر شود.
+
+آزمایش این شرایط در محیط‌های تولیدی به آسانی و به همان اندازه خطرناک است، مانند شلیک تعداد کافی و پایدار درخواست‌ها برای دیدن اینکه آیا این درخواست‌ها ثبت شده‌اند و آیا امکان پر کردن پارتیشن گزارش از طریق این درخواست‌ها وجود دارد یا خیر. در برخی از محیط‌ها که پارامترهای QUERY_STRING نیز بدون توجه به اینکه از طریق درخواست‌های GET (دریافت) یا POST (ارسال) تولید می‌شوند، ثبت می‌شوند، می‌توان پرس‌و‌جوهای بزرگی را شبیه‌سازی کرد که گزارش‌ها را سریع‌تر پر می‌کند، زیرا به طور معمول، یک درخواست تنها باعث می شود که فقط مقدار کمی از داده ها ثبت شود، مانند تاریخ و زمان، آدرس IP منبع، درخواست URI و نتیجه سرور.
+
+#### چرخش لاگ (Log Rotation)
+
+اکثر سرورها (اما تعداد کمی از برنامه های سفارشی) گزارش ها را می چرخانند تا از پر کردن سیستم فایلی که در آن قرار دارند جلوگیری کنند. فرض در چرخش لاگ ها این است که اطلاعات موجود در آنها فقط برای مدت زمان محدودی ضروری است.
+
+این ویژگی باید آزمایش شود تا اطمینان حاصل شود که:
+
+- گزارش‌ها برای مدت زمانی که در سیاست امنیتی تعریف شده است، نه بیشتر و نه کمتر، نگهداری می‌شوند.
+- گزارش‌ها پس از چرخش فشرده می‌شوند (این یک کار راحتی است، زیرا به این معنی است که گزارش‌های بیشتری برای همان فضای دیسک موجود ذخیره می‌شوند).
+- مجوزهای سیستم فایل فایل‌های گزارش چرخش شده مشابه (یا سخت‌گیرانه‌تر) با مجوزهای خود فایل‌های گزارش است. به عنوان مثال، سرورهای وب باید در گزارش‌هایی که استفاده می‌کنند بنویسند، اما در واقع نیازی به نوشتن در گزارش‌های چرخانده ندارند، به این معنی که مجوزهای فایل‌ها را می‌توان پس از چرخش تغییر داد تا از تغییر آنها توسط فرآیند وب سرور جلوگیری شود.
+
+برخی از سرورها ممکن است زمانی که به اندازه معینی رسیدند، گزارش‌ها را بچرخانند. اگر این اتفاق بیفتد، باید اطمینان حاصل شود که مهاجم نمی تواند گزارش ها را مجبور به چرخش کند تا ردهای خود را پنهان کند.
+
+#### کنترل دسترسی لاگ (Log Access Control)
+
+اطلاعات گزارش رویداد هرگز نباید برای کاربران نهایی قابل مشاهده باشد. حتی مدیران وب نیز نباید قادر به دیدن چنین گزارش‌هایی باشند، زیرا جداسازی کنترل‌های وظیفه را نقض می‌کند. اطمینان حاصل کنید که هر طرح کنترل دسترسی که برای محافظت از دسترسی به گزارش‌های خام استفاده می‌شود و هر برنامه‌ای که قابلیت مشاهده یا جستجوی گزارش‌ها را ارائه می‌کند، با طرح‌های کنترل دسترسی برای سایر نقش‌های کاربر برنامه مرتبط نباشد. همچنین نباید هیچ داده گزارشی توسط کاربران احراز هویت نشده قابل مشاهده باشد.
+
+#### بررسی لاگ (Log Review)
+
+بررسی گزارش‌ها می‌تواند برای چیزی بیش از استخراج آمار استفاده از فایل‌ها در سرورهای وب (که معمولاً همان چیزی است که اکثر برنامه‌های مبتنی بر گزارش روی آن تمرکز می‌کنند) استفاده می‌شود، اما همچنین برای تعیین اینکه آیا حملات در وب سرور انجام می‌شوند یا خیر.
+
+برای تجزیه و تحلیل حملات وب سرور، فایل های ثبت خطای سرور باید تجزیه و تحلیل شوند. بررسی باید بر روی موارد زیر متمرکز شود:
+
+- پیغام های خطای 40x (not found) (یافت نشد). مقدار زیادی از اینها از یک منبع ممکن است نشان دهنده استفاده از ابزار اسکنر CGI علیه وب سرور باشد.
+- پیام های 50x (server error) (خطای سرور). اینها می تواند نشانه ای از سوء استفاده مهاجم از بخش هایی از برنامه باشد که به طور غیرمنتظره ای از کار می افتند. به عنوان مثال، فازهای اول یک حمله تزریق SQL زمانی که پرس و جوی SQL (query) به درستی ساخته نشده باشد و اجرای آن در پایگاه داده پشتیبان ناموفق باشد، این پیام خطا را ایجاد می کند.
+
+آمار گزارش یا تجزیه و تحلیل نباید در همان سروری که گزارش‌ها را تولید می‌کند، تولید یا ذخیره شود. در غیر این صورت، یک مهاجم ممکن است، از طریق آسیب پذیری وب سرور یا پیکربندی نامناسب، به آنها دسترسی پیدا کند و اطلاعات مشابهی را که توسط خود فایل های گزارش فاش می شود، بازیابی کند.
+
+## منابع
+
+- Apache
+    - Apache Security, by Ivan Ristic, O’reilly, March 2005.
+    - [Apache Security Secrets: Revealed (Again), Mark Cox, November 2003](https://awe.com/mark/talks/apachecon2003us.html)
+    - [Apache Security Secrets: Revealed, ApacheCon 2002, Las Vegas, Mark J Cox, October 2002](https://awe.com/mark/talks/apachecon2002us.html)
+    - [Performance Tuning](https://httpd.apache.org/docs/current/misc/perf-tuning.html)
+- Lotus Domino
+    - Lotus Security Handbook, William Tworek et al., April 2004, available in the IBM Redbooks collection
+    - Lotus Domino Security, an X-force white-paper, Internet Security Systems, December 2002
+    - Hackproofing Lotus Domino Web Server, David Litchfield, October 2001
+- Microsoft IIS
+    - [Security Best Practices for IIS 8](https://docs.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2012-R2-and-2012/jj635855(v=ws.11))
+    - [CIS Microsoft IIS Benchmarks](https://www.cisecurity.org/benchmark/microsoft_iis/)
+    - Securing Your Web Server (Patterns and Practices), Microsoft Corporation, January 2004
+    - IIS Security and Programming Countermeasures, by Jason Coombs
+    - From Blueprint to Fortress: A Guide to Securing IIS 5.0, by John Davis, Microsoft Corporation, June 2001
+    - Secure Internet Information Services 5 Checklist, by Michael Howard, Microsoft Corporation, June 2000
+- Red Hat’s (formerly Netscape’s) iPlanet
+    - Guide to the Secure Configuration and Administration of iPlanet Web Server, Enterprise Edition 4.1, by James M Hayes, The Network Applications Team of the Systems and Network Attack Center (SNAC), NSA, January 2001
+- WebSphere
+    - IBM WebSphere V5.0 Security, WebSphere Handbook Series, by Peter Kovari et al., IBM, December 2002.
+    - IBM WebSphere V4.0 Advanced Edition Security, by Peter Kovari et al., IBM, March 2002.
+- General
+    - [Logging Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html), OWASP
+    - [SP 800-92](https://csrc.nist.gov/publications/detail/sp/800-92/final) Guide to Computer Security Log Management, NIST
+    - [PCI DSS v3.2.1](https://www.pcisecuritystandards.org/document_library) Requirement 10 and PA-DSS v3.2 Requirement 4, PCI Security Standards Council
+
+- Generic:
+    - [CERT Security Improvement Modules: Securing Public Web Servers](https://resources.sei.cmu.edu/asset_files/SecurityImprovementModule/2000_006_001_13637.pdf)
