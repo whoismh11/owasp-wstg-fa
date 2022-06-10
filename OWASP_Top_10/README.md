@@ -64,7 +64,7 @@
 - مجموع رخدادها (Total Occurrences): تعداد کل برنامه هایی که CWE ها را به یک دسته نگاشت دارند.
 - مجموع CVE ها (Total CVEs): تعداد کل CVE ها در NVD DB که به CWE های نگاشت شده به یک دسته نگاشت شده اند.
 
-## لینک های منبع
+## منبع
 
 - [owasp.org/www-project-top-ten](https://owasp.org/www-project-top-ten/)
 - [owasp.org/Top10](https://owasp.org/Top10/)
