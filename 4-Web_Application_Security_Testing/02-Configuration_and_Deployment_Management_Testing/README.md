@@ -9,3 +9,7 @@
 4.2.3 [Test File Extensions Handling for Sensitive Information (مدیریت پسوند فایل آزمایشی برای اطلاعات حساس)](03-Test_File_Extensions_Handling_for_Sensitive_Information.md)
 
 4.2.4 [Review Old Backup and Unreferenced Files for Sensitive Information (فایل های پشتیبان قدیمی و بدون مرجع را برای اطلاعات حساس مرور کنید)](04-Review_Old_Backup_and_Unreferenced_Files_for_Sensitive_Information.md)
+
+4.2.5 [Enumerate Infrastructure and Application Admin Interfaces (زیرساخت و رابط های مدیریت برنامه را برشمارید)](05-Enumerate_Infrastructure_and_Application_Admin_Interfaces.md)
+
+4.2.6 [Test HTTP Methods &#x202b;(روش های HTTP را آزمایش کنید)](06-Test_HTTP_Methods.md)
