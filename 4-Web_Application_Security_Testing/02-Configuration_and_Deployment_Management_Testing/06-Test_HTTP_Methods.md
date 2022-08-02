@@ -128,3 +128,135 @@ Host: example.org
 اگرچه ممکن است توسط ابزارهای اسکن خودکار گزارش شود، وجود این روش ها در RESTful API یک مشکل امنیتی نیست. با این حال، این عملکرد ممکن است دارای آسیب‌پذیری‌های دیگری باشد (مانند کنترل دسترسی ضعیف)، و باید کاملاً آزمایش شود.
 
 ### پی گیری (TRACE)
+
+روش `TRACE` (یا معادل روش `TRACK` مایکروسافت) باعث می شود که سرور محتوای درخواست را بازتاب دهد. این منجر به آسیب‌پذیری به نام Cross-Site Tracing (XST) شد که در سال [2003](https://www.cgisecurity.com/whitehat-mirror/WH-WhitePaper_XST_ebook.pdf) (PDF) منتشر شد، که می‌توان از آن برای دسترسی به کوکی‌هایی استفاده کرد که دارای پرچم `HttpOnly` هستند (flag set). روش `TRACE` سال‌هاست که در همه مرورگرها و افزونه‌ها مسدود شده است و به همین دلیل این مشکل دیگر قابل استفاده نیست. با این حال، ممکن است همچنان توسط ابزارهای اسکن خودکار علامت گذاری شود، و روش `TRACE` فعال شده در یک وب سرور نشان می دهد که به درستی سخت نشده است.
+
+### اتصال (CONNECT)
+
+روش `CONNECT` باعث می شود وب سرور یک اتصال TCP را به سیستم دیگری باز کند و سپس ترافیک مشتری را به آن سیستم منتقل کند. این می تواند به مهاجم اجازه دهد تا ترافیک پروکسی را از طریق سرور، به منظور پنهان کردن آدرس منبع خود، دسترسی به سیستم های داخلی یا دسترسی به خدماتی که به لوکال هاست متصل هستند، انجام دهد. نمونه ای از یک درخواست `CONNECT` در زیر نشان داده شده است:
+
+```http
+CONNECT 192.168.0.1:443 HTTP/1.1
+Host: example.org
+```
+
+### پچ (PATCH)
+
+روش `PATCH` در [RFC 5789](https://datatracker.ietf.org/doc/html/rfc5789) تعریف شده است و برای ارائه دستورالعمل‌هایی در مورد چگونگی تغییر یک شی استفاده می‌شود. خود RFC تعریف نمی‌کند که این دستورالعمل‌ها در چه قالبی باید باشند، اما روش‌های مختلفی در استانداردهای دیگر تعریف شده‌اند، مانند [RFC 6902 - JavaScript Object Notation (JSON) Patch](https://datatracker.ietf.org/doc/html/rfc6902).
+
+به عنوان مثال، اگر کاربری به نام "foo" با ویژگی های زیر داشته باشیم:
+
+```json
+{
+    "role": "user",
+    "email": "foo@example.org"
+}
+```
+
+درخواست JSON PATCH زیر می تواند برای تغییر نقش این کاربر "admin" بدون تغییر آدرس ایمیل استفاده شود:
+
+```http
+PATCH /api/users/foo HTTP/1.1
+Host: example.org
+
+{ "op": "replace", "path": "/role", "value": "admin" }
+```
+
+اگرچه RFC بیان می‌کند که باید شامل دستورالعمل‌هایی برای نحوه اصلاح شی (object) باشد، روش `PATCH` معمولاً برای گنجاندن محتوای تغییر یافته استفاده می‌شود، همانطور که در زیر نشان داده شده است. مانند درخواست قبلی، این مقدار "role" را بدون تغییر بقیه شی به "admin" تغییر می‌دهد. این برخلاف روش `PUT` است که کل شی را بازنویسی می‌کند (و در نتیجه منجر به یک شی بدون ویژگی "email" می‌شود).
+
+```http
+PATCH /api/users/foo HTTP/1.1
+Host: example.org
+
+{
+    "role": "admin"
+}
+```
+
+مانند روش `PUT`، این عملکرد ممکن است دارای ضعف های کنترل دسترسی یا آسیب پذیری های دیگر باشد. به‌علاوه، برنامه‌ها ممکن است در هنگام تغییر یک شی، همان سطح اعتبارسنجی ورودی را انجام ندهند که هنگام ایجاد آن انجام می‌دهند. این می تواند به طور بالقوه اجازه تزریق مقادیر مخرب را بدهد (مانند یک حمله اسکریپت نویسی بین سایتی ذخیره شده (stored cross-site scripting attack))، یا می تواند به اشیاء شکسته یا نامعتبر اجازه دهد که ممکن است منجر به مشکلات مربوط به منطق تجاری (business logic) شود.
+
+### آزمایش بای پس کنترل دسترسی (Testing for Access Control Bypass)
+
+اگر صفحه ای در برنامه زمانی که کاربران تلاش می کنند و مستقیماً به آن دسترسی پیدا می کنند، به صفحه ورود با کد `302` هدایت می کند، ممکن است بتوان با درخواست با روش HTTP متفاوت، مانند `HEAD`، `POST` یا حتی یک روش ساخته شده مانند `FOO`، اگر برنامه وب با `HTTP/1.1 200 OK` به جای `HTTP/1.1 302 Found` مورد انتظار پاسخ دهد، ممکن است امکان دور زدن احراز هویت یا مجوز وجود داشته باشد. مثال زیر نشان می‌دهد که چگونه درخواست `HEAD` ممکن است منجر به تنظیم صفحه کوکی‌های مدیریتی به جای هدایت کاربر به صفحه ورود به سیستم شود:
+
+```http
+HEAD /admin/ HTTP/1.1
+Host: example.org
+```
+
+```http
+HTTP/1.1 200 OK
+[...]
+Set-Cookie: adminSessionCookie=[...];
+```
+
+از طرف دیگر، ممکن است درخواست مستقیم به صفحاتی که باعث عملکرد می شوند وجود داشته باشد، مانند:
+
+```http
+HEAD /admin/createUser.php?username=foo&password=bar&role=admin HTTP/1.1
+Host: example.org
+```
+
+یا:
+
+```http
+FOO /admin/createUser.php
+Host: example.org
+Content-Length: 36
+
+username=foo&password=bar&role=admin
+```
+
+### آزمایش برای نادیده گرفتن روش HTTP &#x202b;(Testing for HTTP Method Overriding)
+
+برخی از چارچوب‌های وب راهی برای نادیده گرفتن روش HTTP واقعی در درخواست با شبیه‌سازی افعال HTTP از دست رفته و ارسال سرصفحه سفارشی در درخواست‌ها ارائه می‌کنند. هدف اصلی از این کار دور زدن یک برنامه میان افزاری (مانند فایروال پروکسی یا برنامه وب) است که روش های خاصی را مسدود می کند. هدرهای جایگزین HTTP زیر به طور بالقوه می توانند مورد استفاده قرار گیرند:
+
+- `X-HTTP-Method`
+- `X-HTTP-Method-Override`
+- `X-Method-Override`
+
+به منظور آزمایش این، در سناریوهایی که افعال محدود شده مانند `PUT` یا `DELETE` یک `405 Method not allowed` را برمی‌گردانند، همان درخواست را با اضافه کردن سرصفحه‌های جایگزین برای نادیده گرفتن روش HTTP دوباره پخش کنید و مشاهده کنید که سیستم چگونه پاسخ می‌دهد. برنامه باید با یک کد وضعیت متفاوت پاسخ دهد (به عنوان مثال `200 OK`) در مواردی که نادیده گرفتن روش پشتیبانی می شود.
+
+وب سرور در مثال زیر به روش `DELETE` اجازه نمی دهد و آن را مسدود می کند:
+
+```http
+DELETE /resource.html HTTP/1.1
+Host: example.org
+```
+
+```http
+HTTP/1.1 405 Method Not Allowed
+[...]
+```
+
+پس از افزودن هدر `X-HTTP-Method`، سرور با 200 به درخواست پاسخ می دهد:
+
+```http
+GET /resource.html HTTP/1.1
+Host: example.org
+X-HTTP-Method: DELETE
+```
+
+```http
+HTTP/1.1 200 OK
+[...]
+```
+
+## اصلاح
+
+- مطمئن شوید که فقط روش های مورد نیاز مجاز هستند و روش های مجاز به درستی پیکربندی شده اند.
+- اطمینان حاصل کنید که هیچ راه حلی برای دور زدن اقدامات امنیتی اجرا شده توسط عوامل کاربر، چارچوب ها یا سرورهای وب اجرا نمی شود.
+
+## ابزارها
+
+- [Ncat](https://nmap.org/ncat/)
+- [cURL](https://curl.haxx.se/)
+- [Nmap http-methods NSE script](https://nmap.org/nsedoc/scripts/http-methods.html)
+
+## منابع
+
+- [RFC 7231 - Hypertext Transfer Protocol (HTTP/1.1)](https://datatracker.ietf.org/doc/html/rfc7231)
+- [RFC 5789 - PATCH Method for HTTP](https://datatracker.ietf.org/doc/html/rfc5789)
+- [HTACCESS: BILBAO Method Exposed](https://web.archive.org/web/20160616172703/http://www.kernelpanik.org/docs/kernelpanik/bme.eng.pdf)
+- [Fortify - Misused HTTP Method Override](https://vulncat.fortify.com/en/detail?id=desc.dynamic.xtended_preview.often_misused_http_method_override)
+- [Mozilla Developer Network - Safe HTTP Methods](https://developer.mozilla.org/en-US/docs/Glossary/Safe/HTTP)
