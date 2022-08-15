@@ -86,7 +86,7 @@ OrgName: GitHub, Inc.
 آزمایش‌کننده دامنه را با استفاده از صفحات GitHub ادعا می‌کند:
 
 ![GitHub claim domain](images/subdomain_takeover_ex2.jpeg)\
-شکل 2-4.2.10: ادعای دامنه GitHub*
+*شکل 2-4.2.10: ادعای دامنه GitHub*
 
 #### آزمایش تصاحب زیردامنه رکورد NS &#x202b;(Testing NS Record Subdomain Takeover)
 
