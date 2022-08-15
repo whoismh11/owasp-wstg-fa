@@ -1,6 +1,6 @@
 # Enumerate Infrastructure and Application Admin Interfaces (fa-IR)
 
-زیرساخت و رابط های مدیریت برنامه را برشمارید (فارسی)
+برشمردن زیرساخت و رابط های مدیریت برنامه (فارسی)
 
 |شناسه          |
 |------------|
