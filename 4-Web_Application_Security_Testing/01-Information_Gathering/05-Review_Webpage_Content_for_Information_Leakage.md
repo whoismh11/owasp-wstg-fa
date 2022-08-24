@@ -156,7 +156,7 @@ var conString = "tcp://postgres:1234@localhost/postgres";
 ## ابزارها
 
 - [Wget](https://www.gnu.org/software/wget/wget.html)
-- Browser "view source" function &#x202b;(مرورگر عملگر "مشاهده منبع")
+- Browser "view source" function &#x202b;(عملکرد "مشاهده منبع" مرورگر)
 - Eyeballs
 - [Curl](https://curl.haxx.se/)
 - [Zaproxy](https://www.zaproxy.org)
