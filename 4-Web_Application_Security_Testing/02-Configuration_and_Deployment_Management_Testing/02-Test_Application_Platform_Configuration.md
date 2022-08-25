@@ -44,7 +44,7 @@
 - [Microsoft's Attack Surface Analyzer](https://github.com/microsoft/AttackSurfaceAnalyzer) (آنالیز سطح حمله مایکروسافت)
 - [NIST's National Checklist Program](https://nvd.nist.gov/ncp/repository) (برنامه ملی چک لیست)
 
-### تست جعبه خاکستری (Gray-Box Testing)
+### آزمایش جعبه خاکستری (Gray-Box Testing)
 
 #### بررسی پیکربندی (Configuration Review)
 
