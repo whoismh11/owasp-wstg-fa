@@ -22,7 +22,7 @@
 
 ### گرفتن بنر (Banner Grabbing)
 
-گرفتن بنر با ارسال یک درخواست HTTP به وب سرور و بررسی هدر پاسخ ([response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header)) آن انجام می شود. این را می توان با استفاده از ابزارهای مختلف، از جمله `telnet` برای درخواست های HTTP، یا `openssl` برای درخواست های SSL انجام داد.
+گرفتن بنر با ارسال یک درخواست HTTP به وب سرور و بررسی هدر پاسخ ([response header](https://developer.mozilla.org/en-US/docs/Glossary/Response_header)) آن انجام می شود. این را می توان با استفاده از ابزارهای مختلف، از جمله `telnet` برای درخواست های HTTP، یا `openssl` برای درخواست های TLS/SSL انجام داد.
 
 به عنوان مثال، در اینجا پاسخ به یک درخواست از یک سرور آپاچی (Apache) است.
 
