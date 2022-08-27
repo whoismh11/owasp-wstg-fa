@@ -41,10 +41,7 @@
 -	داک داک گو ([DuckDuckGo](https://duckduckgo.com/))، یک موتور جستجوی متمرکز بر حریم خصوصی است که نتایج را از [منابع](https://help.duckduckgo.com/results/sources/) مختلف جمع آوری می کند. از نحو جستجو ([search syntax](https://help.duckduckgo.com/duckduckgo-help-pages/results/syntax/)) پشتیبانی می کند.
 -	گوگل ([Google](https://www.google.com/))، که [محبوب ترین](https://en.wikipedia.org/wiki/Web_search_engine#Market_share) موتور جستجوی جهان را ارائه می دهد و از یک سیستم رتبه بندی برای بازگرداندن مرتبط ترین نتایج استفاده می کند. از اپراتورهای جستجو ([search operators](https://support.google.com/websearch/answer/2466433)) پشتیبانی می کند.
 -	اینترنت آرشیو وی بک مشین ([Internet Archive Wayback Machine](https://archive.org/web/))، "ساخت یک کتابخانه دیجیتالی از سایت های اینترنتی و سایر مصنوعات فرهنگی به شکل دیجیتال است."
--	استارت پیج ([Startpage](https://www.startpage.com/))، موتور جستجویی است که از نتایج گوگل بدون جمع آوری اطلاعات شخصی از طریق ردیاب ها و گزارش ها استفاده می کند. از اپراتورهای جستجو ([search operators](https://support.startpage.com/index.php?/Knowledgebase/Article/View/989/0/advanced-search-which-search-operators-are-supported-by-startpagecom)) پشتیبانی می کند.
 -	شدان ([Shodan](https://www.shodan.io/)) ، سرویسی برای جستجوی دستگاه ها و سرویس های متصل به اینترنت. گزینه های استفاده شامل یک طرح رایگان محدود و همچنین برنامه های اشتراک پولی است.
-
-هم DuckDuckGo و هم Startpage با استفاده نکردن از ردیاب ها یا حفظ گزارش ها، حریم خصوصی بیشتری را به کاربران ارائه می دهند. این می تواند نشت اطلاعات را برای آزمایش کننده کاهش دهد.
 
 ### اپراتورهای جستجو (Search Operators)
 
@@ -54,7 +51,7 @@
 -	`inurl:` فقط نتایجی را برمی گرداند که شامل کلمه کلیدی در &#x202b;URL باشد.
 -	`intitle:` فقط نتایجی را برمی گرداند که کلمه کلیدی در عنوان صفحه دارند.
 -	`intext:` یا `inbody:` فقط کلمه کلیدی را در بدنه &#x202b;(body) صفحات جستجو می کند.
--	`filetype:` فقط با یک نوع فایل خاص مانند &#x202b;png یا &#x202b;php مطابقت دارد.
+-	`filetype:` فقط با یک نوع فایل خاص مانند &#x202b;`.png` یا &#x202b;`.php` مطابقت دارد.
 
 به عنوان مثال، برای یافتن محتوای وب `owasp.org` که توسط یک موتور جستجوی معمولی فهرست (ایندکس) شده است، نحو (دستورالعمل) مورد نیاز عبارت است از:
 
