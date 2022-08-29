@@ -54,6 +54,18 @@
 
 #### 4.2.6 [Test HTTP Methods &#x202b;(آزمایش روش های HTTP)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/06-Test_HTTP_Methods.md)
 
+#### 4.2.7 [Test HTTP Strict Transport Security &#x202b;(آزمایش امنیت حمل و نقل سخت HTTP)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/07-Test_HTTP_Strict_Transport_Security.md)
+
+#### 4.2.8 [Test RIA Cross Domain Policy &#x202b;(آزمایش سیاست دامنه متقابل RIA)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/08-Test_RIA_Cross_Domain_Policy.md)
+
+#### 4.2.9 [Test File Permission (آزمایش مجوز فایل)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/09-Test_File_Permission.md)
+
+#### 4.2.10 [Test for Subdomain Takeover (آزمایش تصاحب زیردامنه)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/10-Test_for_Subdomain_Takeover.md)
+
+#### 4.2.11 [Test Cloud Storage (آزمایش فضای ذخیره سازی ابری)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/11-Test_Cloud_Storage.md)
+
+#### 4.2.12 [Test for Content Security Policy (آزمایش برای سیاست امنیتی محتوا)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy.md)
+
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
 
 ## منبع
