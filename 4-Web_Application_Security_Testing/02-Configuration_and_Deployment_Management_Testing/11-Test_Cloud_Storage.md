@@ -80,3 +80,64 @@ https://s3.amazonaws.com/bucket-name
 ```
 
 #### <div dir="rtl" align="right">URL سطل را شناسایی کنید (Identify Bucket URL)</div>
+
+برای آزمایش جعبه سیاه، URL های S3 را می توان در پیام های HTTP یافت. مثال زیر نشان می دهد که یک URL سطلی در تگ `img` در یک پاسخ HTTP ارسال شده است.
+
+```html
+...
+<img src="https://my-bucket.s3.us-west-2.amazonaws.com/puppy.png">
+...
+```
+
+برای آزمایش جعبه خاکستری، می توانید URL های سطلی را از رابط وب آمازون، اسناد، کد منبع یا هر منبع موجود دیگری دریافت کنید.
+
+#### آزمایش با AWS-CLI &#x202b;(Testing with AWS-CLI)
+
+علاوه بر آزمایش با کرل، می توانید با ابزار خط فرمان AWS نیز آزمایش کنید. در این مورد از پروتکل `//:s3` استفاده می شود.
+
+##### فهرست کنید (List)
+
+دستور زیر تمام اشیاء سطل را هنگامی که به صورت عمومی پیکربندی می شود فهرست می کند.
+
+```bash
+aws s3 ls s3://<bucket-name>
+```
+
+##### بارگذاری (Upload)
+
+دستور زیر برای بارگذاری (آپلود) یک فایل است
+
+```bash
+aws s3 cp arbitrary-file s3://bucket-name/path-to-save
+```
+
+این مثال زمانی که آپلود با موفقیت انجام شده است نتیجه را نشان می دهد.
+
+```bash
+$ aws s3 cp test.txt s3://bucket-name/test.txt
+upload: ./test.txt to s3://bucket-name/test.txt
+```
+
+این مثال نتیجه را هنگامی که آپلود ناموفق است نشان می دهد.
+
+```bash
+$ aws s3 cp test.txt s3://bucket-name/test.txt
+upload failed: ./test2.txt to s3://bucket-name/test2.txt An error occurred (AccessDenied) when calling the PutObject operation: Access Denied
+```
+
+##### برداشتن (حذف کردن) (Remove)
+
+دستور زیر برای حذف یک شی است
+
+```bash
+aws s3 rm s3://bucket-name/object-to-remove
+```
+
+## ابزارها
+
+- [AWS CLI](https://aws.amazon.com/cli/)
+
+## منابع
+
+- [Working with Amazon S3 Buckets](https://docs.aws.amazon.com/AmazonS3/latest/dev/UsingBucket.html)
+- [flAWS 2](http://flaws2.cloud)
