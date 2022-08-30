@@ -78,6 +78,10 @@
 
 #### 4.3.5 [Testing for Weak or Unenforced Username Policy (آزمایش برای سیاست نام کاربری ضعیف یا غیرقابل اجرا)](4-Web_Application_Security_Testing/03-Identity_Management_Testing/05-Testing_for_Weak_or_Unenforced_Username_Policy.md)
 
+### 4.4 [Authentication Testing (آزمایش احراز هویت)](4-Web_Application_Security_Testing/04-Authentication_Testing/README.md)
+
+#### 4.4.1 [Testing for Credentials Transported over an Encrypted Channel (آزمایش برای اعتبارنامه های منتقل شده از طریق یک کانال رمزگذاری شده)](4-Web_Application_Security_Testing/04-Authentication_Testing/01-Testing_for_Credentials_Transported_over_an_Encrypted_Channel.md)
+
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top10/)
 
 ## منبع
