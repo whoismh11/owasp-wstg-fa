@@ -53,4 +53,4 @@
 
 ## منابع
 
-[طراحی ثبت نام کاربر (User Registration Design)](https://mashable.com/2011/06/09/user-registration-design/)
+[User Registration Design](https://mashable.com/2011/06/09/user-registration-design/)
