@@ -9,3 +9,5 @@
 4.2 [Configuration and Deployment Management Testing (آزمایش مدیریت پیکربندی و استقرار)](02-Configuration_and_Deployment_Management_Testing/README.md)
 
 4.3 [Identity Management Testing (آزمایش مدیریت هویت)](03-Identity_Management_Testing/README.md)
+
+4.4 [Authentication Testing (آزمایش احراز هویت)](04-Authentication_Testing/README.md)
