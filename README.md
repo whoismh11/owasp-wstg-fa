@@ -78,7 +78,7 @@
 
 #### 4.3.5 [Testing for Weak or Unenforced Username Policy (آزمایش برای سیاست نام کاربری ضعیف یا غیرقابل اجرا)](4-Web_Application_Security_Testing/03-Identity_Management_Testing/05-Testing_for_Weak_or_Unenforced_Username_Policy.md)
 
-## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top_10/)
+## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top10/)
 
 ## منبع
 
