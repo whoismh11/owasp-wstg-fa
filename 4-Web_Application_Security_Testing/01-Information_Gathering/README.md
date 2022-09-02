@@ -16,7 +16,7 @@
 
 4.1.7 [Map Execution Paths Through Application (مسیرهای اجرای نقشه از طریق برنامه)](07-Map_Execution_Paths_Through_Application.md)
 
-4.1.8 [Fingerprint Web Application Framework (چارچوب انگشت نگاری برنامه وب)](08-Fingerprint_Web_Application_Framework.md)
+4.1.8 [Fingerprint Web Application Framework (انگشت نگاری چارچوب برنامه وب)](08-Fingerprint_Web_Application_Framework.md)
 
 4.1.9 [Fingerprint Web Application (انگشت نگاری برنامه وب)](09-Fingerprint_Web_Application.md)
 
