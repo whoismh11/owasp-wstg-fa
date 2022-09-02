@@ -59,7 +59,7 @@ https://my-bucket.s3.us-west-2.amazonaws.com/puppy.png
 https://s3.Region.amazonaws.com/bucket-name/key-name
 ```
 
-مانند بالا، در مثال زیر،` my-bucket` نام سطل، `us-west-2` منطقه و `puppy.png` نام کلید است:
+مانند بالا، در مثال زیر،`my-bucket` نام سطل، `us-west-2` منطقه و `puppy.png` نام کلید است:
 
 ```text
 https://s3.us-west-2.amazonaws.com/my-bucket/puppy.jpg
