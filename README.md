@@ -84,6 +84,10 @@
 
 ## [OWASP Top 10 &#x202b;(10 مورد برتر OWASP)](OWASP_Top10/)
 
+## مشارکت
+
+- [Discord](https://discord.gg/2JjvhAk)
+
 ## منبع
 
 - [owasp.org/www-project-web-security-testing-guide](https://owasp.org/www-project-web-security-testing-guide/)
