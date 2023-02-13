@@ -66,6 +66,8 @@
 
 #### 4.2.12 [Test for Content Security Policy (آزمایش برای سیاست امنیت محتوا)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/12-Test_for_Content_Security_Policy.md)
 
+#### 4.2.13 [Test for Path Confusion (آزمایش سردرگمی مسیر)](4-Web_Application_Security_Testing/02-Configuration_and_Deployment_Management_Testing/13-Test_for_Path_Confusion.md)
+
 ### 4.3 [Identity Management Testing (آزمایش مدیریت هویت)](4-Web_Application_Security_Testing/03-Identity_Management_Testing/README.md)
 
 #### 4.3.1 [Test Role Definitions (آزمایش تعاریف نقش)](4-Web_Application_Security_Testing/03-Identity_Management_Testing/01-Test_Role_Definitions.md)
