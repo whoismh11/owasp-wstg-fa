@@ -82,4 +82,4 @@
 
 - [wget](https://www.gnu.org/software/wget)
 - [curl](https://curl.haxx.se)
-- google for "web mirroring tools" (ابزارهای انعکاس وب).
+- google for "web mirroring tools".
