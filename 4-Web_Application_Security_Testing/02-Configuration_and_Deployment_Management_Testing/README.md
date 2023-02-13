@@ -25,3 +25,5 @@
 4.2.11 [Test Cloud Storage (آزمایش فضای ذخیره سازی ابری)](11-Test_Cloud_Storage.md)
 
 4.2.12 [Test for Content Security Policy (آزمایش برای سیاست امنیت محتوا)](12-Test_for_Content_Security_Policy.md)
+
+4.2.13 [Test for Path Confusion (آزمایش سردرگمی مسیر)](13-Test_for_Path_Confusion.md)
