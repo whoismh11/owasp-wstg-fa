@@ -156,7 +156,7 @@ var conString = "tcp://postgres:1234@localhost/postgres";
 ## ابزارها
 
 - [Wget](https://www.gnu.org/software/wget/wget.html)
-- Browser "view source" function &#x202b;(عملکرد "مشاهده منبع" مرورگر)
+- Browser "view source" function
 - Eyeballs
 - [Curl](https://curl.haxx.se/)
 - [Zaproxy](https://www.zaproxy.org)
@@ -167,9 +167,9 @@ var conString = "tcp://postgres:1234@localhost/postgres";
 ## منابع
 
 - [KeyHacks](https://github.com/streaak/keyhacks)
-- [RingZer0 Online CTF](https://ringzer0ctf.com/challenges/104) - Challenge 104 "Admin Panel". &#x202b;(چالش 104 "پنل مدیریت")
+- [RingZer0 Online CTF](https://ringzer0ctf.com/challenges/104) - Challenge 104 "Admin Panel".
 
-### کاغذهای سفید
+### کاغذهای سفید (Whitepapers)
 
 - [HTML version 4.01](https://www.w3.org/TR/1999/REC-html401-19991224)
 - [XHTML](https://www.w3.org/TR/2010/REC-xhtml-basic-20101123/)
