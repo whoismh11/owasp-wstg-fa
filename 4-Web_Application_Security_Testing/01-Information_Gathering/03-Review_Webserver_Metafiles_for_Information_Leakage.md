@@ -190,7 +190,7 @@ Google is built by a large team of engineers, designers, researchers, robots, an
 
 ## ابزارها
 
-- Browser (مرورگر) &#x202b;(مشاهده عملکرد منبع یا Dev Tools)
+- Browser (View Source or Dev Tools functionality)
 - curl
 - wget
 - Burp Suite
