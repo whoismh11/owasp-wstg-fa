@@ -60,6 +60,6 @@
 
 ## منابع
 
-- ا [1] WebSEAL، همچنین به عنوان مدیر احراز هویت Tivoli &#x202b;(Tivoli Authentication Manager) شناخته می شود، یک پروکسی معکوس از IBM است که بخشی از چارچوب Tivoli است.
-- ا [2] مانند Symantec's Bugtraq یا ISS' X-Force یا NIST's National Vulnerability Database (NVD).
-- ا [3] برخی از ابزارهای مدیریت مبتنی بر رابط کاربری گرافیکی برای Apache (مانند NetLoony) وجود دارد، اما آنها هنوز به طور گسترده مورد استفاده قرار نگرفته اند.
+- [1] WebSEAL, also known as Tivoli Authentication Manager, is a reverse proxy from IBM which is part of the Tivoli framework.
+- [2] Such as Symantec's Bugtraq, ISS' X-Force, or NIST's National Vulnerability Database (NVD).
+- [3] There are some GUI-based administration tools for Apache (like NetLoony) but they are not in widespread use yet.
