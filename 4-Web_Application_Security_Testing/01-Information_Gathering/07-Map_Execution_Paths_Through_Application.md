@@ -43,10 +43,10 @@
 
 ## ابزارها
 
-- پروکسی حمله Zed (ZAP) &#x202b;([Zed Attack Proxy (ZAP)](https://github.com/zaproxy/zaproxy))
-- لیست نرم افزارهای صفحه گسترده ([List of spreadsheet software](https://en.wikipedia.org/wiki/List_of_spreadsheet_software))
-- نرم افزار نمودارسازی ([Diagramming software](https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software))
+- [Zed Attack Proxy (ZAP)](https://github.com/zaproxy/zaproxy)
+- [List of spreadsheet software](https://en.wikipedia.org/wiki/List_of_spreadsheet_software)
+- [Diagramming software](https://en.wikipedia.org/wiki/List_of_concept-_and_mind-mapping_software)
 
 ## منابع
 
-- پوشش کد ([Code Coverage](https://en.wikipedia.org/wiki/Code_coverage))
+- [Code Coverage](https://en.wikipedia.org/wiki/Code_coverage)
