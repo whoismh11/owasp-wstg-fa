@@ -254,7 +254,7 @@ https://wiki.owasp.org/index.php?title=Fingerprint_Web_Application_Framework&act
 
 ## منابع
 
-### کاغذهای سفید
+### کاغذهای سفید (Whitepapers)
 
-- [Saumil Shah: &#x202b;"مقدمه ای بر انگشت نگاری HTTP"](https://web.archive.org/web/20190526182734/https://net-square.com/httprint_paper.html)
-- [Anant Shrivastava : "انگشت نگاری برنامه وب"](https://anantshri.info/articles/web_app_finger_printing.html)
+- [Saumil Shah: "An Introduction to HTTP fingerprinting"](https://web.archive.org/web/20190526182734/https://net-square.com/httprint_paper.html)
+- [Anant Shrivastava : "Web Application Finger Printing"](https://anantshri.info/articles/web_app_finger_printing.html)
